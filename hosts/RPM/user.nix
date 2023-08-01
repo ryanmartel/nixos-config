@@ -3,16 +3,6 @@
 {
 	imports = [../../modules/default.nix ];
 
-	home = {
-		username = "ryan";
-		homeDirectory = "/home/ryan";
-		sessionVariables = {
-			EDITOR = "vim";
-			BROWSER = "firefox";
-			TERMINAL = "kitty";
-		};
-	};
-
 	config.modules = {
 		# GUI
 		
@@ -24,5 +14,4 @@
 		# SYSTEM
 		packages.enable = true;
 	};
-	programs.home-manager.enable = true;
 }
