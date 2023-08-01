@@ -64,7 +64,7 @@
 			};
 
 		in {
-			nixosConfiguration = {
+			nixosConfigurations = {
 				# Define Systems
 				#		              Architecture   Hostname
 				RPM = mkSystem inputs.nixpkgs "x86_64-linux" "RPM";
