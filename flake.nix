@@ -56,7 +56,7 @@
 							useGlobalPkgs = true;
 							useUserPackages = true;
 							extraSpecialArgs = { inherit inputs; };
-							users.ryan = (./. + "/home/${hostname}");
+							users.ryan = (./. + "/hosts/${hostname}/user.nix");
 						};
 					}
 				];
