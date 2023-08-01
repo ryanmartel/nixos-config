@@ -8,8 +8,11 @@ in {
     config = mkIf cfg.enable {
 	programs.nixneovim = {
 		enable = true;
-		colorschemes.tokyonight.enable = true;
 		viAlias = true;
+		colorschemes.tokyonight = {
+			enable = true;
+			transparent = true;
+		};
 	};
     };
 }
