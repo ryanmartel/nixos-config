@@ -1,19 +1,10 @@
 { config, lib, inputs, ... }:
 
 {
-	imports = [../../modules/default.nix ];
-
-	home = {
-		username = "ryan";
-		homeDirectory = "/home/ryan";
-		sessionVariables = {
-			EDITOR = "vim";
-			BROWSER = "firefox";
-			TERMINAL = "kitty";
-		};
-	};	
-	programs.home-manager.enable = true;
-
+	imports = [
+		../../modules/default.nix 
+		./home.nix
+	];
 	config.modules = {
 		# GUI
 		
