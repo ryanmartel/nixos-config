@@ -13,6 +13,7 @@
 		kitty.enable = true;	
 		git.enable = true;
 		bash.enable = true;
+		nvim.enable = true;
 
 		# SYSTEM
 		packages.enable = true;

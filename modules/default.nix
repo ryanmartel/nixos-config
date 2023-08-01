@@ -8,6 +8,7 @@
 		./kitty
 		./git
 		./bash
+		./nvim
 		# SYSTEM
 		./packages
 	];
