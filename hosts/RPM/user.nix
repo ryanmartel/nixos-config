@@ -2,6 +2,7 @@
 
 {
 	imports = [
+		inputs.nixneovim.nixosModules.default
 		../../modules/default.nix 
 		./home.nix
 	];
