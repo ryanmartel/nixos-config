@@ -13,6 +13,11 @@ in {
 			enable = true;
 			transparent = true;
 		};
+		options = {
+			number = true; #show line numbers
+			relativenumber = true;
+			shiftwidth = 2;
+		};
 	};
     };
 }
