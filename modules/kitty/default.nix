@@ -16,7 +16,7 @@ in {
 		settings = {
 			background_opacity = "0.93";
 			scrollback_lines = 5000;
-			cursor-shape = "block";
+			cursor-shape = "beam";
 		};
 	};
     };

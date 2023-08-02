@@ -44,6 +44,9 @@ in {
 		    enable = true;
 		    maxLines = 1;
 		};
+		telescope = {
+		    enable = true;
+		};
 	    };
 	};
     };
