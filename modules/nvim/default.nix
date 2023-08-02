@@ -14,6 +14,10 @@ in {
 #			style = "day";
 #			transparent = true;
 #		};
+	    colorschemes.nord = {
+		enable = true;
+		disable_background = true;
+	    };
 	    options = {
 		number = true; #show line numbers
 		    relativenumber = true;
