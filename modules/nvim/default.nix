@@ -9,13 +9,13 @@ in {
 	programs.nixneovim = {
 	    enable = true;
 	    viAlias = true;
-#		colorschemes.tokyonight = {
-#			enable = true;
-#			style = "day";
-#			transparent = true;
-#		};
-	    colorschemes.nord = {
+#	    colorschemes.nord = {
+#		enable = true;
+#		disable_background = true;
+#	    };
+	    colorschemes.rose-pine = {
 		enable = true;
+		variant = "moon";
 		disable_background = true;
 	    };
 	    options = {
