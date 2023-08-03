@@ -6,7 +6,9 @@ let cfg = config.modules.packages;
 in {
     options.modules.packages = { enable = mkEnableOption "packages"; };
     config = mkIf cfg.enable {
+	fonts.fontconfig.enable = true;
 	home.packages = with pkgs; [
+		(nerdfonts.override{ fonts = [ "JetBrainsMono" ]; })
 		neofetch
 		nnn #terminal file manager
 		
