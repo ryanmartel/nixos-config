@@ -11,7 +11,7 @@ in {
 #		theme = "Rosé Pine Moon";
 		theme = "Tokyo Night";
 		font = {
-			name = "JetBrainsMono Nerd Font";
+			name = "JetBrainsMono";
 			size = 11;
 		};
 		settings = {
