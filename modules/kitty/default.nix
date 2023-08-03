@@ -8,7 +8,7 @@ in {
     config = mkIf cfg.enable {
 	programs.kitty = {
 		enable = true;
-		theme = "Tokyo Night";
+		theme = "Rose Piné Moon";
 		font = {
 			name = "JetBrainsMono Nerd Font";
 			size = 11;
@@ -16,7 +16,7 @@ in {
 		settings = {
 			background_opacity = "0.93";
 			scrollback_lines = 5000;
-			cursor-shape = "beam";
+			cursor-shape = "block";
 		};
 	};
     };
