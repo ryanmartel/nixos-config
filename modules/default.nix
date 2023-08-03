@@ -9,6 +9,7 @@
 		./git
 		./bash
 		./nvim
+		./neonix
 		# SYSTEM
 		./packages
 	];

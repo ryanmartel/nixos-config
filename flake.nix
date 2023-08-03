@@ -16,6 +16,7 @@
 
 	# NVIM packages and configuration
 	nixneovim.url = "github:nixneovim/nixneovim";
+	nixvim.url = "github:nix-community/nixvim";
 
 	# home-manager, used for managing user configuration
 	home-manager = {
@@ -38,7 +39,7 @@
   # 
   # The `@` syntax here is used to alias the attribute set of the
   # inputs's parameter, making it convenient to use inside the function.
-  outputs = inputs@{ self, nixpkgs, home-manager, nixneovim, ... }:  
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, nixneovim, ... }:  
 	let
 		system = "x86_64-linux"; #current system
 		pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;

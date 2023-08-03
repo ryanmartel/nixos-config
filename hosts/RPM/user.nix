@@ -3,6 +3,7 @@
 {
 	imports = [
 		inputs.nixneovim.nixosModules.default
+		inputs.homeManagerModules.nixvim
 		../../modules/default.nix 
 		./home.nix
 	];
@@ -13,7 +14,8 @@
 		kitty.enable = true;	
 		git.enable = true;
 		bash.enable = true;
-		nvim.enable = true;
+		nvim.enable = false;
+		neonix.enable = true;
 
 		# SYSTEM
 		packages.enable = true;
