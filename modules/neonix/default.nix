@@ -45,7 +45,7 @@ in {
 			cmake.enable = true;
 			gopls.enable = true;
 			html.enable = true;
-			java-language-server.enable = true;
+# BROKEN?		java-language-server.enable = true;
 			jsonls.enable = true;
 			nixd.enable = true;
 			pylsp.enable = true;
