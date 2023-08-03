@@ -8,10 +8,35 @@ in {
     config = mkIf cfg.enable {
 	programs.nixvim = {
 	    enable = true;
+	    # Make it pretty
 	    colorschemes.tokyonight = {
 	    	enable = true;
 		transparent = true;
 		style = "night";
+	    };
+
+	    # Options
+		options = {
+			number = true;
+			relativenumber = true;
+			shiftwidth = 4;
+		};
+
+	    # Plugins
+	    plugins = {
+	    	fugitive.enable = true;
+		harpoon = {
+			enable = true;
+		};
+		treesitter.enable = true;
+		treesitter-context = {
+			enable = true;
+			maxLines = 1;
+		};
+		telescope.enable = true;
+		trouble.enable = true;
+		undotree.enable = true;
+
 	    };
 	};
     };
