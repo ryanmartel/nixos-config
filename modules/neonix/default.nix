@@ -40,7 +40,7 @@ in {
 		# LSP 
 		lsp = {
 		    enable  = true;
-		    servers {
+		    servers = {
 			clangd.enable = true;
 			cmake.enable = true;
 			gopls.enable = true;
