@@ -9,10 +9,8 @@ in {
 	programs.nixneovim = {
 	    enable = true;
 	    viAlias = true;
-#	    colorschemes.nord = {
-#		enable = true;
-#		disable_background = true;
-#	    };
+	    
+	    # COLOR
 	    colorschemes.rose-pine = {
 		enable = true;
 		variant = "moon";
@@ -24,7 +22,7 @@ in {
 		shiftwidth = 4;
 	    };
 
-	    # KEY MAPS
+	    # KEYMAPS
 	    mappings = {
 	    };
 
