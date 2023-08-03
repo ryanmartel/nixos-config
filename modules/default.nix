@@ -4,6 +4,7 @@
 	imports = [
 		# GUI
 		
+		./steam
 		# CLI
 		./kitty
 		./git

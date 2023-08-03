@@ -8,7 +8,8 @@ in {
     config = mkIf cfg.enable {
 	programs.kitty = {
 		enable = true;
-		theme = "Rosé Pine Moon";
+#		theme = "Rosé Pine Moon";
+		theme = "Tokyo Night";
 		font = {
 			name = "JetBrainsMono Nerd Font";
 			size = 11;

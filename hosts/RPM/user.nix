@@ -9,6 +9,7 @@
 	];
 	config.modules = {
 		# GUI
+		steam.enable = true;
 		
 		# CLI
 		kitty.enable = true;	
