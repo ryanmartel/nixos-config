@@ -36,7 +36,23 @@ in {
 		telescope.enable = true;
 		trouble.enable = true;
 		undotree.enable = true;
-
+		
+		# LSP 
+		lsp = {
+		    enable  = true;
+		    servers {
+			clangd.enable = true;
+			cmake.enable = true;
+			gopls.enable = true;
+			html.enable = true;
+			java-language-server.enable = true;
+			jsonls.enable = true;
+			nixd.enable = true;
+			pylsp.enable = true;
+			rust-analyzer.enable = true;
+		    };
+		};
+		lualine.enable = true;
 	    };
 	};
     };
