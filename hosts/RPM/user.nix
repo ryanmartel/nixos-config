@@ -3,7 +3,7 @@
 {
 	imports = [
 		inputs.nixneovim.nixosModules.default
-		inputs.homeManagerModules.nixvim
+		inputs.nixvim.homeManagerModules.nixvim
 		../../modules/default.nix 
 		./home.nix
 	];

@@ -8,6 +8,11 @@ in {
     config = mkIf cfg.enable {
 	programs.nixvim = {
 	    enable = true;
+	    colorschemes.tokyonight = {
+	    	enable = true;
+		transparent = true;
+		style = "night";
+	    };
 	};
     };
 }
