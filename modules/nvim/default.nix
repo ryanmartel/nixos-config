@@ -6,45 +6,53 @@ let cfg = config.modules.nvim;
 in {
     options.modules.nvim = { enable = mkEnableOption "nvim"; };
     config = mkIf cfg.enable {
-	programs.nixneovim = {
+	programs.nixvim = {
 	    enable = true;
-	    viAlias = true;
-	    
-	    # COLOR
-	    colorschemes.rose-pine = {
-		enable = true;
-		variant = "moon";
-		disable_background = true;
-	    };
-	    options = {
-		number = true; #show line numbers
-		    relativenumber = true;
-		shiftwidth = 4;
+	    # Make it pretty
+	    colorschemes.tokyonight = {
+	    	enable = true;
+		transparent = true;
+		style = "night";
 	    };
 
-	    # KEYMAPS
-	    mappings = {
-	    };
+	    # Options
+		options = {
+			number = true;
+			relativenumber = true;
+			shiftwidth = 4;
+		};
 
-	    #PLUGINS
+	    # Plugins
 	    plugins = {
-		trouble = {
-		    enable = true;
+	    	fugitive.enable = true;
+		harpoon = {
+			enable = true;
 		};
-		undotree = {
-		    enable = true;
-		};
-		treesitter = {
-		    enable = true;
-		    installAllGrammars = true;
-		};
+		treesitter.enable = true;
 		treesitter-context = {
-		    enable = true;
-		    maxLines = 1;
+			enable = true;
+			maxLines = 1;
 		};
-		telescope = {
-		    enable = true;
+		telescope.enable = true;
+		trouble.enable = true;
+		undotree.enable = true;
+		
+		# LSP 
+		lsp = {
+		    enable  = true;
+		    servers = {
+			clangd.enable = true;
+			cmake.enable = true;
+			gopls.enable = true;
+			html.enable = true;
+# BROKEN?		java-language-server.enable = true;
+			jsonls.enable = true;
+			nixd.enable = true;
+			pylsp.enable = true;
+			rust-analyzer.enable = true;
+		    };
 		};
+		lualine.enable = true;
 	    };
 	};
     };
