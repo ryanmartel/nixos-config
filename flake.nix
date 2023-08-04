@@ -52,15 +52,16 @@
 					{ networking.hostName = hostname; }
 					# General config (users, network, sound, etc...)
 					./system/configuration.nix
+					(./. + "/hosts/${hostname}/system/configuration.nix")
 					# Hardware-config
-					(./. + "/hosts/${hostname}/hardware-configuration.nix")
+					(./. + "/hosts/${hostname}/system/hardware-configuration.nix")
 					home-manager.nixosModules.home-manager
 					{
 						home-manager = {
 							useGlobalPkgs = true;
 							useUserPackages = true;
 							extraSpecialArgs = { inherit inputs; };
-							users.ryan = (./. + "/hosts/${hostname}/user.nix");
+							users.ryan = (./. + "/hosts/${hostname}/users/ryan/user.nix");
 						};
 					}
 				];
