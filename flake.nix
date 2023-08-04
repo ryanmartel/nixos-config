@@ -51,10 +51,10 @@
 				modules = [
 					{ networking.hostName = hostname; }
 					# General config (users, network, sound, etc...)
-					./system/configuration.nix
-					(./. + "/hosts/${hostname}/system/configuration.nix")
+					#(./. + "/hosts/${hostname}/system/configuration.nix")
 					# Hardware-config
-					(./. + "/hosts/${hostname}/system/hardware-configuration.nix")
+				        #(./. + "/hosts/${hostname}/system/hardware-configuration.nix")
+					(./. + "/hosts/${hostname}/system/system.nix")
 					home-manager.nixosModules.home-manager
 					{
 						home-manager = {

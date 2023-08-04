@@ -3,7 +3,7 @@
 {
 	imports = [
 		inputs.nixvim.homeManagerModules.nixvim
-		../../modules/default.nix 
+		../../../../modules/user/default.nix 
 		./home.nix
 	];
 	config.modules = {
