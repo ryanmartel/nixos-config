@@ -4,7 +4,7 @@
     imports = [
 	./configuration.nix
 	./hardware-configuration.nix
-	../../modules/system/default.nix
+	./../../../modules/system/default.nix
     ];
     config.modules = {
 	# GUI
