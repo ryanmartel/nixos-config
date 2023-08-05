@@ -27,6 +27,10 @@ in {
 	    maps = {
 		normal."<C-e>" = { action = ''<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>''; };
 		normal."<leader>e" = { action = "<cmd>Ex<CR>"; };
+		normal."<leader>ff" = { action = "<cmd>Telescope find_files<CR>"; };
+		normal."<leader>fg" = { action = "<cmd>Telescope git_files<CR>"; };
+		normal."<leader>fs" = { action = ''<cmd>lua function() builtin.grep_string({search = vim.fn.input("Grep > ")}) end()<CR>''; };
+    
 	    };
 	    # Plugins
 	    plugins = {
@@ -36,7 +40,7 @@ in {
 			keymaps = {
 			    addFile = "<leader>a";
 			   #cmdToggleQuickMenu = "<C-e>"; broken
-			    navFile = { "1" = "<C-h>"; "2" = "<C-t>"; "3" = "<C-b"; "4" = "<C-s>"; };
+			    navFile = { "1" = "<C-h>"; "2" = "<C-j>"; "3" = "<C-k"; "4" = "<C-l>"; };
 			};
 		};
 		treesitter.enable = true;
