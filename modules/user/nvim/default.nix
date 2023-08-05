@@ -7,6 +7,7 @@ in {
     options.modules.nvim = { enable = mkEnableOption "nvim"; };
     config = mkIf cfg.enable {
 	programs.nixvim = {
+	    globals.mapleader = " ";
 	    enable = true;
 	    # Make it pretty
 	    colorschemes.tokyonight = {
@@ -28,7 +29,9 @@ in {
 		harpoon = {
 			enable = true;
 			keymaps = {
-			    
+#			    addFile = "<leader>a";
+#			    cmdToggleQuickMenu = "<C-e>";
+			    #navFile = { "1" = "<C-h>"; "2" = "<C-t>"; "3" = "<C-b"; "4" = "<C-s>"; };
 			};
 		};
 		treesitter.enable = true;
