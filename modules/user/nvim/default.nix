@@ -29,7 +29,8 @@ in {
 		normal."<leader>e" = { action = "<cmd>Ex<CR>"; };
 		normal."<leader>ff" = { action = "<cmd>Telescope find_files<CR>"; };
 		normal."<leader>fg" = { action = "<cmd>Telescope git_files<CR>"; };
-		normal."<leader>fs" = { action = ''<cmd>lua function() builtin.grep_string({search = vim.fn.input("Grep > ")}) end()<CR>''; };
+		normal."<leader>fs" = { action = ''<cmd>lua require("telescope.builtin").grep_string({search = vim.fn.input("Grep > ")})<CR>''; };
+		normal."<leader>v" = { action = "<cmd>UndoTreeToggle<CR>"; };
     
 	    };
 	    # Plugins
