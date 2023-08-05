@@ -27,6 +27,9 @@ in {
 	    	fugitive.enable = true;
 		harpoon = {
 			enable = true;
+			keymaps = {
+			    
+			};
 		};
 		treesitter.enable = true;
 		treesitter-context = {
@@ -36,6 +39,9 @@ in {
 		telescope.enable = true;
 		trouble.enable = true;
 		undotree.enable = true;
+		presence-nvim = {
+		    enable = true;
+		};
 		
 		# LSP 
 		lsp = {
