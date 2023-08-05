@@ -59,7 +59,6 @@ in {
 		    enable = true;
 		};
 		nvim-autopairs.enable = true;
-		
 		# LSP 
 		lsp = {
 		    enable  = true;
@@ -75,9 +74,12 @@ in {
 			rust-analyzer.enable = true;
 		    };
 		};
+		#rust-tools.enable = true;
 		cmp-nvim-lsp.enable = true;
 		cmp-buffer.enable = true;
 		cmp-path.enable = true;
+		cmp_luasnip.enable = true;
+		cmp-nvim-lua.enable = true;
 		nvim-cmp.enable = true;
 		lualine.enable = true;
 	    };
