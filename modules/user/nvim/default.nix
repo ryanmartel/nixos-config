@@ -30,7 +30,10 @@ in {
 		normal."<leader>ff" = { action = "<cmd>Telescope find_files<CR>"; };
 		normal."<leader>fg" = { action = "<cmd>Telescope git_files<CR>"; };
 		normal."<leader>fs" = { action = ''<cmd>lua require("telescope.builtin").grep_string({search = vim.fn.input("Grep > ")})<CR>''; };
-		normal."<leader>v" = { action = "<cmd>UndoTreeToggle<CR>"; };
+		normal."<leader>v" = { action = "<cmd>UndotreeToggle<CR>"; };
+		normal."<leader>gs" = { action = "<cmd>Git<CR>"; };
+
+		insert."jk" = "<ESC>";
     
 	    };
 	    # Plugins
