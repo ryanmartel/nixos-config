@@ -23,15 +23,20 @@ in {
 			shiftwidth = 4;
 		};
 
+	    # HOTKEY MAPPING
+	    maps = {
+		normal."<C-e>" = { action = ''<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>''; };
+		normal."<leader>e" = { action = "<cmd>Ex<CR>"; };
+	    };
 	    # Plugins
 	    plugins = {
 	    	fugitive.enable = true;
 		harpoon = {
 			enable = true;
 			keymaps = {
-#			    addFile = "<leader>a";
-#			    cmdToggleQuickMenu = "<C-e>";
-			    #navFile = { "1" = "<C-h>"; "2" = "<C-t>"; "3" = "<C-b"; "4" = "<C-s>"; };
+			    addFile = "<leader>a";
+			   #cmdToggleQuickMenu = "<C-e>"; broken
+			    navFile = { "1" = "<C-h>"; "2" = "<C-t>"; "3" = "<C-b"; "4" = "<C-s>"; };
 			};
 		};
 		treesitter.enable = true;
