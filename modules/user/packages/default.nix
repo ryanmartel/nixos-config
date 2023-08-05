@@ -32,6 +32,10 @@ in {
 		zstd
 		gnupg
 		
+
+		# Social
+		discord
+
 		#nix related
 		#provides 'nom' works just like 'nix'
 		# with detailed logs
