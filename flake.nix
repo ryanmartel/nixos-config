@@ -17,6 +17,9 @@
 	# NVIM packages and configuration
 	nixvim.url = "github:nix-community/nixvim";
 
+    # Hyprland
+    hyprland.url = "github:hyprwm/Hyprland";
+
 	# home-manager, used for managing user configuration
 	home-manager = {
 		url = "github:nix-community/home-manager";
@@ -38,7 +41,7 @@
   # 
   # The `@` syntax here is used to alias the attribute set of the
   # inputs's parameter, making it convenient to use inside the function.
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, ... }:  
+  outputs = inputs@{ self, nixpkgs, home-manager, hyprland, nixvim, ... }:  
 	let
 		system = "x86_64-linux"; #current system
 		pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
@@ -50,10 +53,6 @@
 				system = system;
 				modules = [
 					{ networking.hostName = hostname; }
-					# General config (users, network, sound, etc...)
-					#(./. + "/hosts/${hostname}/system/configuration.nix")
-					# Hardware-config
-				        #(./. + "/hosts/${hostname}/system/hardware-configuration.nix")
 					(./. + "/hosts/${hostname}/system/system.nix")
 					home-manager.nixosModules.home-manager
 					{
