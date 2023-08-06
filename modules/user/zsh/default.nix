@@ -12,6 +12,7 @@ in {
             enableAutosuggestions = true;
             enableVteIntegration = true;
             oh-my-zsh = {
+                enable = true;
                 theme = "robbyrussell";
             };
         };

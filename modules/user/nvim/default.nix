@@ -169,6 +169,7 @@ in {
                 enable = true;
                 direction = "float";
                 openMapping = "<A-1>";
+                shell = "zsh";
             };
 	    };
 	};
