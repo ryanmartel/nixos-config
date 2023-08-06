@@ -9,7 +9,7 @@ in {
 	programs.nixvim = {
 
         # General
-	    globals.mapleader = " ";
+        globals.mapleader = " ";
         viAlias = true;
         vimAlias = true;
 	    enable = true;
