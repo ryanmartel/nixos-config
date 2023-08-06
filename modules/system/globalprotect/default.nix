@@ -9,6 +9,6 @@ in {
         services.globalprotect = {
             enable = true;
         };
-        environment.systemPackages = [ globalprotect-openconnect ];
+        environment.systemPackages = with pkgs; [ globalprotect-openconnect ];
     };
 }
