@@ -10,7 +10,7 @@
 	# GUI
 	steam.enable = true;
 	#CLI
-
+    zsh.enable = true;
 	#SYSTEM
 	packages.enable = true;
     };

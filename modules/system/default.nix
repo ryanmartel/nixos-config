@@ -5,7 +5,7 @@
 		# GUI
 		./steam
 		# CLI
-
+        ./zsh
 		# SYSTEM
 		./packages
 	];
