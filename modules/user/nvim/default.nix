@@ -93,7 +93,22 @@ in {
 		cmp-path.enable = true;
 		cmp_luasnip.enable = true;
 		cmp-nvim-lua.enable = true;
-		nvim-cmp.enable = true;
+		luasnip.enable = true;
+		nvim-cmp = {
+		    enable = true;
+		    mapping = {
+			"<C-y>" = "cmp.mapping.confirm({ select = true })";
+			"<C-n>" = "cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Select})";
+			"<C-Space>" = "cmp.mapping.complete()";
+		    };
+		    snippet.expand = "luasnip";
+		    sources = [
+			{ name = "nvim_lsp"; }
+			{ name = "luasnip"; }
+			{ name = "path"; }
+			{ name = "buffer"; }
+		    ];
+		};
 		lualine.enable = true;
 	    };
 	};
