@@ -9,6 +9,7 @@
     config.modules = {
 	# GUI
 	steam.enable = true;
+    chrome.enable = true;
 	#CLI
     zsh.enable = true;
 	#SYSTEM
