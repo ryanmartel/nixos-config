@@ -100,6 +100,7 @@ in {
 		    mapping = {
 			"<C-y>" = "cmp.mapping.confirm({ select = true })";
 			"<C-n>" = "cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Select})";
+			"<C-p>" = "cmp.mapping.select_prev_item({behavior = cmp.SelectBehavior.Select})";
 			"<C-Space>" = "cmp.mapping.complete()";
 		    };
 		    snippet.expand = "luasnip";
@@ -111,6 +112,11 @@ in {
 		    ];
 		};
 		lualine.enable = true;
+		toggleterm = {
+		    enable = true;
+		    direction = "float";
+		    openMapping = "<A-1>";
+		}
 	    };
 	};
     };
