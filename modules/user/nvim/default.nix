@@ -20,26 +20,70 @@ in {
 		options = {
 			number = true;
 			relativenumber = true;
+			
 			shiftwidth = 4;
-		};
+			expandtab = true;
+			tabstop = 4;
+			softtabstop = 4;
 
+			smartindent = true;
+			
+			swapfile = false;
+			backup = false;
+			undodir = "~/.vim/undodir";
+			undofile = true;
+
+			hlsearch = false;
+			incsearch = true;
+
+			scrolloff = 8;
+			updatetime = 50;
+		};
 	    # HOTKEY MAPPING
 	    maps = {
-		normal."<C-e>" = { action = ''<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>''; };
-		normal."<leader>e" = { action = "<cmd>Ex<CR>"; };
-		normal."<leader>ff" = { action = "<cmd>Telescope find_files<CR>"; };
-		normal."<leader>fg" = { action = "<cmd>Telescope git_files<CR>"; };
-		normal."<leader>fs" = { action = ''<cmd>lua require("telescope.builtin").grep_string({search = vim.fn.input("Grep > ")})<CR>''; };
-		normal."<leader>v" = { action = "<cmd>UndotreeToggle<CR>"; };
-		normal."<leader>gs" = { action = "<cmd>Git<CR>"; };
+            # Harpoon
+            normal."<C-e>" = { action = ''<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>''; };
 
-		insert."jk" = "<ESC>";
+            # File explorer
+            normal."<leader>e" = { action = "<cmd>Ex<CR>"; };
+            # Telescope
+            normal."<leader>ff" = { action = "<cmd>Telescope find_files<CR>"; };
+            normal."<leader>fg" = { action = "<cmd>Telescope git_files<CR>"; };
+            normal."<leader>fs" = { action = ''<cmd>lua require("telescope.builtin").grep_string({search = vim.fn.input("Grep > ")})<CR>''; };
+            # UndoTree
+            normal."<leader>v" = { action = "<cmd>UndotreeToggle<CR>"; };
+            # Fugitive
+            normal."<leader>gs" = { action = "<cmd>Git<CR>"; };
+
+            # Vim Navigation and editing
+            insert."jk" = "<ESC>";
+            
+            visual."J" = { action = ":m '>+1<CR>gv=gv"; };
+            visual."K" = { action = ":m '<-2<CR>gv=gv"; };
+            
+            normal."J" = "mzJ`z";
+            normal."<C-d>" = "<C-d>zz";
+            normal."<C-u>" = "<C-u>zz";
+            normal."n" = "nzzzv";
+            normal."N" = "Nzzzv";
     
+            visualOnly."<leader>p" = ''"_dP'';
+            normal."<leader>y" = ''"+y'';
+            visual."<leader>y" = ''"+y'';
+            normal."<leader>Y" = ''"+Y'';
+
+            normal."<leader>d" = ''"_d'';
+            visual."<leader>d" = ''"_d'';
+
+            normal."Q" = "<nop>";
+            normal."<leader>s" = { action = '':%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>''; };
+
+
 	    };
 	    # Plugins
 	    plugins = {
 	    	fugitive.enable = true;
-		auto-save.enable = true;
+		# auto-save.enable = true;
 		harpoon = {
 			enable = true;
 			keymaps = {
