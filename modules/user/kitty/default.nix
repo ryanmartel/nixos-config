@@ -7,6 +7,9 @@ in {
     options.modules.kitty = { enable = mkEnableOption "kitty"; };
     config = mkIf cfg.enable {
 	programs.kitty = {
+        shellIntegration = {
+            enableZshIntegration = true;
+        };
 		enable = true;
 #		theme = "Rosé Pine Moon";
 		theme = "Tokyo Night";

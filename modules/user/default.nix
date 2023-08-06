@@ -9,6 +9,7 @@
 		./git
 		./bash
 		./nvim
+        ./zsh
 		# SYSTEM
 		./packages
 	];
