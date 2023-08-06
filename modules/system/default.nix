@@ -4,6 +4,7 @@
 	imports = [
 		# GUI
 		./steam
+        ./chrome
 		# CLI
         ./zsh
 		# SYSTEM
