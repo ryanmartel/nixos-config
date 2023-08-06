@@ -39,6 +39,7 @@ in {
 	    # Plugins
 	    plugins = {
 	    	fugitive.enable = true;
+		auto-save.enable = true;
 		harpoon = {
 			enable = true;
 			keymaps = {
