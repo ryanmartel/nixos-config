@@ -13,5 +13,6 @@
     zsh.enable = true;
 	#SYSTEM
 	packages.enable = true;
+    globalprotect.enable = true;
     };
 }
