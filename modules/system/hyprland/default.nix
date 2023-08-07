@@ -23,14 +23,14 @@ in {
                 };
             };
         };
-#        programs = {
- #           hyprland = {
-  #              enable = true;
-   #             xwayland = {
-    #                enable = true;
-     #           };
-      #      };
-       # };
+        programs = {
+            hyprland = {
+                enable = true;
+                xwayland = {
+                    enable = true;
+                };
+            };
+        };
         environment.systemPackages = with pkgs; [
             waybar # status bar
             swaybg # wallpaper
