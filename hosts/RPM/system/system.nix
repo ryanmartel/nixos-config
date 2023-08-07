@@ -13,6 +13,7 @@
 	#CLI
     zsh.enable = true;
 	#SYSTEM
+    hyprland.enable = true;
 	packages.enable = true;
     globalprotect.enable = true;
     };
