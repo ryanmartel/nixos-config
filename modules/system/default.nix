@@ -8,5 +8,6 @@
         ./zsh
 		# SYSTEM
 		./packages
+        ./hyprland
 	];
 }
