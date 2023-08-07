@@ -4,10 +4,12 @@
 	imports = [
 		# GUI
 		./steam
+        ./chrome
 		# CLI
         ./zsh
 		# SYSTEM
 		./packages
         ./hyprland
+        ./globalprotect
 	];
 }
