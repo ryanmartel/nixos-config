@@ -104,7 +104,7 @@ in {
                 keymaps = {
                     addFile = "<leader>a";
 #cmdToggleQuickMenu = "<C-e>"; broken
-                    navFile = { "1" = "<C-h>"; "2" = "<C-j>"; "3" = "<C-k"; "4" = "<C-l>"; };
+                    navFile = { "1" = "<C-h>"; "2" = "<C-j>"; "3" = "<C-k>"; "4" = "<C-l>"; };
                 };
             };
             treesitter-context = {
