@@ -2,6 +2,7 @@
 
 {
 	imports = [
+        inputs.hyprland.homeManagerModules.default
 		inputs.nixvim.homeManagerModules.nixvim
 		./../../../../modules/user/default.nix 
 		./home.nix
@@ -18,5 +19,6 @@
 
 		# SYSTEM
 		packages.enable = true;
+        hyprland.enable = true;
 	};
 }
