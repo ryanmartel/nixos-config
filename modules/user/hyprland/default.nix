@@ -10,5 +10,31 @@ in {
             enable = true;
             extraConfig = import ./config.nix {};
         };
+        services = {
+            mako.enable = true;
+  #          swayidle = {
+  #              enable = true;
+   #             timeouts = [
+    #                { timeout = 300; command = }
+     #           ];
+      #      };
+        };
+        programs = {
+            waybar = {
+                enable = true;
+                systemd.enable = true;
+            };
+            swaylock = {
+                enable = true;
+                settings = {
+                    color = "262626";
+                    font-size = 24;
+                    indicator-idle-visible = false;
+                    indicator-radius = 100;
+                    line-color = "ffffff";
+                    show-failed-attempts = true;
+                };
+            };
+        };
     };
 }

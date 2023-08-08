@@ -24,8 +24,9 @@ in {
             xwayland.enable = true;
         };
         environment.systemPackages = with pkgs; [
+            xdg-desktop-portal-hyprland # Desktop Portal
         #    waybar # status bar
-         #   swaybg # wallpaper
+            swaybg # wallpaper
           #  swayidle # idle timeout
            # swaylock # lock screen
           #  wlogout # logout menu
