@@ -8,7 +8,7 @@ in {
     config = mkIf cfg.enable {
         wayland.windowManager.hyprland = {
             enable = true;
-                
+            extraConfig = import ./config.nix {};
         };
     };
 }

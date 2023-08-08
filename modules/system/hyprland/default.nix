@@ -9,9 +9,11 @@ in {
         services = {
             xserver = {
                 enable = true;
+                videoDrivers = ["amdgpu"];
                 displayManager = {
-                    sddm = {
+                    gdm = {
                         enable = true;
+                        wayland = true;
                     };
                 };
             };
