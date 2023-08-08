@@ -1,5 +1,4 @@
 { ky_variant ? "", kb_options ? "", monitor_config ? "", ...}:
-
 ''
 # See https://wiki.hyprland.org/Configuring/Monitors/
 monitor=,preferred,auto,auto
