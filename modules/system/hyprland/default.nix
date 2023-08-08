@@ -12,16 +12,7 @@ in {
                 displayManager = {
                     sddm = {
                         enable = true;
-                        theme = "suggar-candy";
                     };
-                };
-            };
-        };
-        programs = {
-            hyprland = {
-                enable = true;
-                xwayland = {
-                    enable = true;
                 };
             };
         };
