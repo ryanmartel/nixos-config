@@ -1,4 +1,7 @@
 { ky_variant ? "", kb_options ? "", monitor_config ? "", ...}:
+let 
+    bgImage = ../../../static/mountains01.png;
+in
 ''
 # See https://wiki.hyprland.org/Configuring/Monitors/
 monitor=,preferred,auto,auto
@@ -8,6 +11,8 @@ monitor=,preferred,auto,auto
 
 # Execute your favorite apps at launch
 # exec-once = waybar & hyprpaper & firefox
+exec-once = waybar
+exec-once = swaybg -i ${bgImage}
 
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf
@@ -108,7 +113,6 @@ device:epic-mouse-v1 {
 $mainMod = SUPER
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-bind = $mainMod, Q, exec, kitty
 bind = $mainMod, return, exec, kitty
 bind = $mainMod, C, killactive, 
 bind = $mainMod, M, exit, 
@@ -116,13 +120,17 @@ bind = $mainMod, E, exec, dolphin
 bind = $mainMod, V, togglefloating, 
 bind = $mainMod, R, exec, wofi --show drun
 bind = $mainMod, P, pseudo, # dwindle
-bind = $mainMod, J, togglesplit, # dwindle
+#bind = $mainMod, J, togglesplit, # dwindle
 
 # Move focus with mainMod + arrow keys
 bind = $mainMod, left, movefocus, l
 bind = $mainMod, right, movefocus, r
 bind = $mainMod, up, movefocus, u
 bind = $mainMod, down, movefocus, d
+bind = $mainMod, H, movefocus, l
+bind = $mainMod, L, movefocus, r
+bind = $mainMod, K, movefocus, u
+bind = $mainMod, J, movefocus, d
 
 # Switch workspaces with mainMod + [0-9]
 bind = $mainMod, 1, workspace, 1
