@@ -15,19 +15,24 @@ in {
                     };
                 };
             };
+
+        };
+        programs.hyprland = {
+            ebable = true;
+            xwayland.enable = true;
         };
         environment.systemPackages = with pkgs; [
-      #      waybar # status bar
-       #     swaybg # wallpaper
-        #    swayidle # idle timeout
-         #   swaylock # lock screen
+        #    waybar # status bar
+         #   swaybg # wallpaper
+          #  swayidle # idle timeout
+           # swaylock # lock screen
           #  wlogout # logout menu
            # wl-clipboard # copy and pasting
             #wf-recorder # screen capture
             #grim # screenshots
             #slurp # select region to screenshot
             #mako # notifications
-           # libsForQt5.dolphin # file explorer
+            libsForQt5.dolphin # file explorer
         ];
     };
 }

@@ -12,6 +12,5 @@
         ./zsh
 		# SYSTEM
 		./packages
-        ./hyprland
 	];
 }
