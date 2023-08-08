@@ -78,6 +78,9 @@
     #media-session.enable = true;
   };
 
+  # Control system-wide privlages
+  security.polkit.enable = true;
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
