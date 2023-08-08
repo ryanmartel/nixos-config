@@ -6,6 +6,17 @@ let cfg = config.modules.hyprland;
 in {
     options.modules.hyprland = { enable = mkEnableOption "hyprland"; };
     config = mkIf cfg.enable {
+        services = {
+            xserver = {
+                enable = true;
+                displayManager = {
+                    sddm = {
+                        enable = true;
+                        theme = "suggar-candy";
+                    };
+                };
+            };
+        };
         programs = {
             hyprland = {
                 enable = true;
@@ -25,7 +36,7 @@ in {
             #grim # screenshots
             #slurp # select region to screenshot
             #mako # notifications
-            libsForQt5.dolphin # file explorer
+           # libsForQt5.dolphin # file explorer
         ];
     };
 }
