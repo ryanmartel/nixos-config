@@ -15,4 +15,7 @@
         color: #235DBA;
         padding: 0 5px;
     }
+    #workspaces button.focus {
+        background:  #6611FF;
+    }
 ''

@@ -27,7 +27,7 @@ in {
         environment.systemPackages = with pkgs; [
             xdg-desktop-portal-hyprland # Desktop Portal
             swaybg # wallpaper
-          #  swayidle # idle timeout
+            swayidle # idle timeout
            # swaylock # lock screen
           #  wlogout # logout menu
            # wl-clipboard # copy and pasting

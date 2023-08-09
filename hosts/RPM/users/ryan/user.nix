@@ -8,7 +8,6 @@
 		./home.nix
 	];
 	config = {
-        programs.waybar.package = inputs.hyprland.packages.${system}.waybar-hyprland;
     modules = {
 		# GUI
 		

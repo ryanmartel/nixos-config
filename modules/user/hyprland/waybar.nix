@@ -1,17 +1,16 @@
-
 {
     mainBar = {
         layer = "top";
         position = "top";
         height = 32;
-        modules-left = [ "hyprland/workspaces" "hyprland/submap"];
-        modules-center = [ "hyprland/window" ];
+        modules-left = [ "wlr/workspaces" "wlr/submap"];
+        modules-center = [ "wlr/window" ];
 
-        "hyprland/submap" = {
+        "wlr/submap" = {
             format = " {}";
         };
 
-        "hyprland/workspaces" = {
+        "wlr/workspaces" = {
             disable-scroll = true;
             format = "{id}";
         };
