@@ -19,14 +19,14 @@ in {
             swayidle = {
                 enable = true;
                 timeouts = [
-                    { timeout = 300; command = "swaylock -f -i ${bgImage}"; }
-                    { timeout = 600; command = "hyprctl dispatch dpms off"; resumeCommand = "hyprctl dispatch dpms on"; }
+                    { timeout = 30; command = "swaylock -f -i ${bgImage}"; }
+                    { timeout = 60; command = "hyprctl dispatch dpms off"; resumeCommand = "hyprctl dispatch dpms on"; }
                 ];
             };
         };
         programs = {
             waybar = {
-                package = inputs.hyprland.packages.${system}.waybar-hyprland;
+                enable = true;
                 settings = import ./waybar.nix;
                 style = import ./waybarCSS.nix;
             };

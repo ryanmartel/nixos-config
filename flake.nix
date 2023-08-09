@@ -59,7 +59,7 @@
 						home-manager = {
 							useGlobalPkgs = true;
 							useUserPackages = true;
-							extraSpecialArgs = { inherit inputs; };
+							extraSpecialArgs = { inherit inputs system; };
 							users.ryan = (./. + "/hosts/${hostname}/users/ryan/user.nix");
 						};
 					}

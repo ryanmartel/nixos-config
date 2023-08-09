@@ -1,4 +1,4 @@
-{ config, lib, inputs, ... }:
+{ config, lib, inputs, system, ... }:
 
 {
 	imports = [
@@ -7,7 +7,9 @@
 		./../../../../modules/user/default.nix 
 		./home.nix
 	];
-	config.modules = {
+	config = {
+        programs.waybar.package = inputs.hyprland.packages.${system}.waybar-hyprland;
+    modules = {
 		# GUI
 		
 		# CLI
@@ -21,4 +23,5 @@
 		packages.enable = true;
         hyprland.enable = true;
 	};
+    };
 }
