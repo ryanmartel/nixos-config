@@ -26,6 +26,7 @@ in {
         };
         programs = {
             waybar = {
+                package = inputs.hyprland.packages.${system}.waybar-hyprland;
                 settings = import ./waybar.nix;
                 style = import ./waybarCSS.nix;
             };

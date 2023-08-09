@@ -11,6 +11,7 @@ monitor=,preferred,auto,auto
 
 # Execute your favorite apps at launch
 # exec-once = waybar & hyprpaper & firefox
+exec-once = dbus-update-activation-environment --systemd DISPLAY WALAND_DISPLAY
 exec-once = waybar
 exec-once = swaybg -i ${bgImage}
 exec-once = wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
