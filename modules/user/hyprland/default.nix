@@ -2,7 +2,6 @@
 
 with lib;
 let cfg = config.modules.hyprland;
-    bgImage = ../../../static/evening-mountains.jpg;
 
 in {
     options.modules.hyprland = { enable = mkEnableOption "hyprland"; };
@@ -16,13 +15,6 @@ in {
                 enable = true;
             };
             mako.enable = true;
-            swayidle = {
-                enable = true;
-                timeouts = [
-                    { timeout = 3; command = "${pkgs.swaylock}/bin/swaylock -f -i ${bgImage}"; }
-                    { timeout = 6; command = "hyprctl dispatch dpms off"; resumeCommand = "hyprctl dispatch dpms on"; }
-                ];
-            };
         };
         programs = {
             waybar = {

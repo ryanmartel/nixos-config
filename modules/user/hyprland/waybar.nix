@@ -3,14 +3,14 @@
         layer = "top";
         position = "top";
         height = 32;
-        modules-left = [ "wlr/workspaces" "wlr/submap"];
-        modules-center = [ "wlr/window" ];
+        modules-left = [ "hyprland/workspaces" "hyprland/submap"];
+        modules-center = [ "hyprland/window" ];
 
-        "wlr/submap" = {
+        "hyprland/submap" = {
             format = " {}";
         };
 
-        "wlr/workspaces" = {
+        "hyprland/workspaces" = {
             disable-scroll = true;
             format = "{id}";
         };
