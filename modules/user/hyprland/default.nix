@@ -30,6 +30,10 @@ in {
                     };
                 };
             };
+            wofi = {
+                enable = true;
+
+            };
             swaylock = {
                 enable = true;
                 settings = {

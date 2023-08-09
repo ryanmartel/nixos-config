@@ -1,6 +1,6 @@
 { ky_variant ? "", kb_options ? "", monitor_config ? "", ...}:
 let 
-    bgImage = ../../../static/mountains01.png;
+    bgImage = ../../../static/evening-mountains.jpg;
 in
 ''
 # See https://wiki.hyprland.org/Configuring/Monitors/
@@ -114,11 +114,12 @@ $mainMod = SUPER
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 bind = $mainMod, return, exec, kitty
-bind = $mainMod, C, killactive, 
+bind = $mainMod SHIFT, Q, killactive, 
+bind = $mainMod, X, exec, swaylock -i ${bgImage}
 bind = $mainMod, M, exit, 
 bind = $mainMod, E, exec, dolphin
 bind = $mainMod, V, togglefloating, 
-bind = $mainMod, R, exec, wofi --show drun
+bind = $mainMod, D, exec, wofi --show drun
 bind = $mainMod, P, pseudo, # dwindle
 #bind = $mainMod, J, togglesplit, # dwindle
 
