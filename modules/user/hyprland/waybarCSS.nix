@@ -5,7 +5,7 @@
         font-family: JetBrainsMono;
     }
     window#waybar {
-        backgorund: #16191C;
+        background: #16191C;
         color: #AAB2BF;
     }
     workspaces button {
