@@ -13,6 +13,7 @@ monitor=,preferred,auto,auto
 # exec-once = waybar & hyprpaper & firefox
 exec-once = waybar
 exec-once = swaybg -i ${bgImage}
+exec-once = wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
 
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf
@@ -41,7 +42,7 @@ general {
     # See https://wiki.hyprland.org/Configuring/Variables/ for more
 
     gaps_in = 5
-    gaps_out = 20
+    gaps_out = 10
     border_size = 2
     col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
     col.inactive_border = rgba(595959aa)
@@ -164,4 +165,7 @@ bind = $mainMod, mouse_up, workspace, e-1
 # Move/resize windows with mainMod + LMB/RMB and dragging
 bindm = $mainMod, mouse:272, movewindow
 bindm = $mainMod, mouse:273, resizewindow
+
+# Clipboard management
+bind = SUPER, V, exec, clipman pick -t wofi
 ''

@@ -2,6 +2,7 @@
 
 with lib;
 let cfg = config.modules.hyprland;
+    bgImage = ../../../static/evening-mountains.jpg;
 
 in {
     options.modules.hyprland = { enable = mkEnableOption "hyprland"; };
@@ -11,24 +12,23 @@ in {
             extraConfig = import ./config.nix {};
         };
         services = {
+            clipman = {
+                enable = true;
+            };
             mako.enable = true;
-  #          swayidle = {
-  #              enable = true;
-   #             timeouts = [
-    #                { timeout = 300; command = }
-     #           ];
-      #      };
+            swayidle = {
+                enable = true;
+                timeouts = [
+                    { timeout = 300; command = "swaylock -f -i ${bgImage}"; }
+                    { timeout = 600; command = "hyprctl dispatch dpms off"; resumeCommand = "hyprctl dispatch dpms on"; }
+                ];
+            };
         };
         programs = {
             waybar = {
                 enable = true;
-                settings = {
-                    mainBar = {
-                        layer = "top";
-                        position = "top";
-                        height = 30;
-                    };
-                };
+                settings = import ./waybar.nix;
+                style = import ./waybarCSS.nix;
             };
             wofi = {
                 enable = true;
