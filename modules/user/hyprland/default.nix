@@ -26,7 +26,6 @@ in {
         };
         programs = {
             waybar = {
-                enable = true;
                 settings = import ./waybar.nix;
                 style = import ./waybarCSS.nix;
             };

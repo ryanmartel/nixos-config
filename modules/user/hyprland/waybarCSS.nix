@@ -8,7 +8,11 @@
         background: #16191C;
         color: #AAB2BF;
     }
-    workspaces button {
+    #workspaces button {
+        padding: 0 5px;
+    }
+    #workspaces button.active {
+        color: #235DBA;
         padding: 0 5px;
     }
 ''

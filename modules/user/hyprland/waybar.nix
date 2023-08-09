@@ -3,17 +3,17 @@
     mainBar = {
         layer = "top";
         position = "top";
-        height = 30;
-        modules-left = [ "sway/workspaces" "sway/mode"];
-        modules-center = [ "sway/window" ];
+        height = 32;
+        modules-left = [ "hyprland/workspaces" "hyprland/submap"];
+        modules-center = [ "hyprland/window" ];
 
-        "sway/mode" = {
+        "hyprland/submap" = {
             format = " {}";
         };
 
-        "sway/workspaces" = {
+        "hyprland/workspaces" = {
             disable-scroll = true;
-            format = "{name}";
+            format = "{id}";
         };
     };
 }
