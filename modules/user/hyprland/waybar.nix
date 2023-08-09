@@ -8,7 +8,12 @@
         modules-center = [ "sway/window" ];
 
         "sway/mode" = {
-            format = "";
+            format = " {}";
+        };
+
+        "sway/workspaces" = {
+            disable-scroll = true;
+            format = "{name}";
         };
     };
 }
