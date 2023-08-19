@@ -11,6 +11,7 @@
 	steam.enable = true;
     chrome.enable = true;
     spotify.enable = true;
+	gimp.enable = true;
 	#CLI
     zsh.enable = true;
 	#SYSTEM
