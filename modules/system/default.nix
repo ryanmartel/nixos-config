@@ -5,6 +5,7 @@
 		# GUI
 		./steam
         ./chrome
+        ./spotify
 		# CLI
         ./zsh
 		# SYSTEM
