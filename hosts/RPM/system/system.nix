@@ -10,6 +10,7 @@
 	# GUI
 	steam.enable = true;
     chrome.enable = true;
+    spotify.enable = true;
 	#CLI
     zsh.enable = true;
 	#SYSTEM

@@ -1,10 +1,13 @@
 { pkgs, lib, config, ... }:
 
 with lib;
-let cfg = config.modules.PROGRAM;
+let cfg = config.modules.spotify;
 
 in {
-    options.modules.PROGRAM = { enable = mkEnableOption "PROGRAM"; };
+    options.modules.spotify = { enable = mkEnableOption "spotify"; };
     config = mkIf cfg.enable {
+        environment.system.Packages = with pkgs; [
+            spotify
+        ];
     };
 }
