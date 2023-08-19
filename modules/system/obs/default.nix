@@ -1,10 +1,13 @@
 { pkgs, lib, config, ... }:
 
 with lib;
-let cfg = config.modules.PROGRAM;
+let cfg = config.modules.obs;
 
 in {
-    options.modules.PROGRAM = { enable = mkEnableOption "PROGRAM"; };
+    options.modules.obs = { enable = mkEnableOption "obs"; };
     config = mkIf cfg.enable {
+		environment.systemPackages = [
+			pkgs.obs-studio
+		];
     };
 }
