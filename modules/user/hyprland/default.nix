@@ -1,4 +1,4 @@
-{ pkgs, lib, config, inputs, system, ... }:
+{ pkgs, lib, config, ... }:
 
 with lib;
 let cfg = config.modules.hyprland;
@@ -19,7 +19,7 @@ in {
         programs = {
             waybar = {
                 enable = true;
-                package = inputs.hyprland.packages.${system}.waybar-hyprland;
+                package = pkgs.waybar-hyprland;
                 settings = import ./waybar.nix;
                 style = import ./waybarCSS.nix;
             };
