@@ -3,6 +3,7 @@
 {
 	imports = [
 		# GUI
+		./gimp
 		./steam
         ./chrome
         ./spotify
