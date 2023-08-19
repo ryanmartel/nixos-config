@@ -89,7 +89,7 @@ in {
 			};
 			# Plugins
 			plugins = {
-				#auto-save.enable = true;
+				auto-save.enable = true;
 				fugitive.enable = true;
 				treesitter.enable = true;
 				telescope.enable = true;
@@ -128,7 +128,7 @@ in {
 					};
 					onAttach = ''
 						local opts = {buffer = bufnr, remap = false}
-					vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+						vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
 						vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
 						vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
 						vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
@@ -157,10 +157,10 @@ in {
 					};
 					snippet.expand = "luasnip";
 					sources = [
-					{ name = "nvim_lsp"; }
-					{ name = "luasnip"; }
-					{ name = "path"; }
-					{ name = "buffer"; }
+						{ name = "nvim_lsp"; }
+						{ name = "luasnip"; }
+						{ name = "path"; }
+						{ name = "buffer"; }
 					];
 				};
 				toggleterm = {
