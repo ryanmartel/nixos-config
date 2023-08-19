@@ -12,6 +12,7 @@
     chrome.enable = true;
     spotify.enable = true;
 	gimp.enable = true;
+	obs.enable = true;
 	#CLI
     zsh.enable = true;
 	#SYSTEM

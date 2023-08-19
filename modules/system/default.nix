@@ -7,6 +7,7 @@
 		./steam
         ./chrome
         ./spotify
+		./obs
 		# CLI
         ./zsh
 		# SYSTEM
