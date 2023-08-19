@@ -12,6 +12,7 @@
 		# GUI
 		
 		# CLI
+		alacritty.enable = true;
 		kitty.enable = true;	
 		git.enable = true;
 		bash.enable = false;
