@@ -5,7 +5,6 @@
 		# GUI
 		
 		# CLI
-		./alacritty
 		./kitty
 		./git
 		./bash
