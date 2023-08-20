@@ -4,11 +4,21 @@ with lib;
 let cfg = config.modules.hyprland;
 
 in {
-    options.modules.hyprland = { enable = mkEnableOption "hyprland"; };
+    options.modules.hyprland = { 
+		enable = mkEnableOption "hyprland"; 
+
+		extraConfig = mkOption {
+			type = types.lines;
+			default = import ./config.nix {};
+			description = ''
+				Extra configuration lines to add to `~/.config/hypr/hyprland.conf`.
+			'';
+		};
+	};
     config = mkIf cfg.enable {
         wayland.windowManager.hyprland = {
             enable = true;
-            extraConfig = import ./config.nix {};
+            extraConfig = cfg.extraConfig;
         };
         services = {
             clipman = {
