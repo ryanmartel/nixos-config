@@ -7,18 +7,43 @@ in {
     options.modules.hyprland = { 
 		enable = mkEnableOption "hyprland"; 
 
-		extraConfig = mkOption {
+		config = mkOption {
 			type = types.lines;
-			default = import ./config.nix {};
+			default = import ./config.nix;
 			description = ''
-				Extra configuration lines to add to `~/.config/hypr/hyprland.conf`.
+				Configuration for hyprland.
 			'';
 		};
+
+		extraConfig = mkOption {
+			type = types.lines;
+			default = "";
+			description = ''
+				Extra configuration lines to append to config.nix
+			'';
+		};
+
+		waybarConfig = mkOption {
+			type = types.attrs;
+			default = import ./waybar.nix;
+			description = ''
+				Configuration for waybar.
+			'';
+		};
+
+		waybarCSS = mkOption {
+			type = types.lines;
+			default = import ./waybarCSS.nix;
+			description = ''
+				StyleSheet for waybar configuration.
+			'';
+		};
+
 	};
     config = mkIf cfg.enable {
         wayland.windowManager.hyprland = {
             enable = true;
-            extraConfig = cfg.extraConfig;
+            extraConfig = cfg.config + cfg.extraConfig;
         };
         services = {
             clipman = {
@@ -30,8 +55,8 @@ in {
             waybar = {
                 enable = true;
                 package = pkgs.waybar-hyprland;
-                settings = import ./waybar.nix;
-                style = import ./waybarCSS.nix;
+                settings = cfg.waybarConfig;
+                style = cfg.waybarCSS;
             };
             wofi = {
                 enable = true;

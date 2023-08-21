@@ -1,4 +1,3 @@
-{ ky_variant ? "", kb_options ? "", monitor_config ? "", ...}:
 let 
     bgImage = ../../../static/evening-mountains.jpg;
 in
