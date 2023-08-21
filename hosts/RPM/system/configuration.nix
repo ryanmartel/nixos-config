@@ -47,6 +47,16 @@
     xkbVariant = "";
   };
 
+  environment.sessionVariables = {
+	QT_QPA_PLATFORMTHEME = "qt5ct";
+  };
+
+  environment.systemPackages = [
+	pkgs.libsForQt5.breeze-qt5
+	pkgs.libsForQt5.breeze-icons
+	pkgs.libsForQt5.qt5ct
+  ];
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 

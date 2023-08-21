@@ -9,5 +9,11 @@
 			TERMINAL = "kitty";
 		};
 	};
+
+	qt = {
+		enable = true;
+		platformTheme = "qtct";
+		style.name = "Breeze";
+	};
 	programs.home-manager.enable = true;
 }
