@@ -59,7 +59,7 @@ in {
     config = mkIf cfg.enable {
         wayland.windowManager.hyprland = {
             enable = true;
-            extraConfig = cfg.config + cfg.executions + cfg.keybinds + cfg.extraConfig;
+            extraConfig = cfg.baseConfig + cfg.executions + cfg.keybinds + cfg.extraConfig;
         };
         services = {
             clipman = {
