@@ -15,6 +15,14 @@ in {
 			'';
 		};
 
+		keybinds = mkOption {
+			type = types.lines;
+			default = import ./keybinds.nix;
+			description = ''
+				Hyprland keybind config.
+			'';
+		};
+
 		extraConfig = mkOption {
 			type = types.lines;
 			default = "";
@@ -43,7 +51,7 @@ in {
     config = mkIf cfg.enable {
         wayland.windowManager.hyprland = {
             enable = true;
-            extraConfig = cfg.config + cfg.extraConfig;
+            extraConfig = cfg.config + cfg.keybinds + cfg.extraConfig;
         };
         services = {
             clipman = {
