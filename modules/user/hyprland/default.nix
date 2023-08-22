@@ -7,11 +7,19 @@ in {
     options.modules.hyprland = { 
 		enable = mkEnableOption "hyprland"; 
 
-		config = mkOption {
+		baseConfig = mkOption {
 			type = types.lines;
 			default = import ./config.nix;
 			description = ''
 				Configuration for hyprland.
+			'';
+		};
+
+		executions = mkOption {
+			type = types.lines;
+			default = import ./executions.nix;
+			description = ''
+				Hyprland execution command config.
 			'';
 		};
 
@@ -51,7 +59,7 @@ in {
     config = mkIf cfg.enable {
         wayland.windowManager.hyprland = {
             enable = true;
-            extraConfig = cfg.config + cfg.keybinds + cfg.extraConfig;
+            extraConfig = cfg.config + cfg.executions + cfg.keybinds + cfg.extraConfig;
         };
         services = {
             clipman = {
