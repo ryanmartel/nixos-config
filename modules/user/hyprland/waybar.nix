@@ -27,7 +27,10 @@
         };
 
 		"network" = {
-			
+			on-click = "~/nixos-config/modules/user/hyprland/networkmanager.sh";
+			format-ethernet = "";
+			format-disconnected = "󰌙";
+			tooltip-format = "{ipaddr} / {cidr}";
 		};
     };
 }
