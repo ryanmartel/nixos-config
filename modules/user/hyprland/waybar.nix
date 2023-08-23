@@ -5,7 +5,7 @@
         height = 32;
         modules-left = [ "hyprland/workspaces" "hyprland/submap"];
         modules-center = [ "clock" ];
-        #modules-right = [ "clock" ];
+        modules-right = [ "network" ];
 
         "hyprland/submap" = {
             format = " {}";
@@ -23,6 +23,11 @@
 
         "clock" = {
             format = "{:%a %d %b %H:%M}";
+			tooltip = false;
         };
+
+		"network" = {
+			
+		};
     };
 }
