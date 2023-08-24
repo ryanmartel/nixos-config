@@ -22,7 +22,7 @@
 			packages.enable = true;
 			hyprland = {
 				enable = true;
-				monitors = "monitor=eDP-1,1920x1080@60,0x0,1.0";
+				monitor = "monitor=eDP-1,1920x1080@60,0x0,1.0";
 			};
 		};
 	};
