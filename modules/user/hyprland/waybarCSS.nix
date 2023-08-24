@@ -25,4 +25,7 @@
         margin: 0px 16px 0px 10px;
         min-width: 140px;
     }
+	#network {
+		padding: 0 10px;
+	}
 ''
