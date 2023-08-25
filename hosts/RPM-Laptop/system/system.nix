@@ -19,5 +19,6 @@
 	hyprland.enable = true;
 	packages.enable = true;
 	globalprotect.enable = true;
+	laptopcontrols.enable = true;
     };
 }
