@@ -3,11 +3,8 @@
 {
 	imports = [
 		# GUI
-		./gimp
 		./steam
-        ./chrome
-        ./spotify
-		./obs
+		./desktopApps
 		# CLI
         ./zsh
 		# SYSTEM
