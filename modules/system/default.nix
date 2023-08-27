@@ -14,5 +14,6 @@
 		./packages
         ./hyprland
         ./globalprotect
+		./laptopcontrols
 	];
 }

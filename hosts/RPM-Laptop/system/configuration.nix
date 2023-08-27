@@ -23,6 +23,10 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Bluetooth
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
 

@@ -31,6 +31,14 @@ in {
 			'';
 		};
 
+		monitor = mkOption {
+			type = types.lines;
+			default = import ./monitor.nix;
+			description = ''
+				Hyprland monitor setting config.
+			'';
+		};
+
 		extraConfig = mkOption {
 			type = types.lines;
 			default = "";
@@ -59,7 +67,7 @@ in {
     config = mkIf cfg.enable {
         wayland.windowManager.hyprland = {
             enable = true;
-            extraConfig = cfg.baseConfig + cfg.executions + cfg.keybinds + cfg.extraConfig;
+            extraConfig = cfg.baseConfig + cfg.executions + cfg.keybinds + cfg.extraConfig + cfg.monitor;
         };
         services = {
             clipman = {

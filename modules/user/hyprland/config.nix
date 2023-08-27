@@ -3,7 +3,6 @@ let
 in
 ''
 # See https://wiki.hyprland.org/Configuring/Monitors/
-monitor=,preferred,auto,auto
 
 
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
