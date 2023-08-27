@@ -7,14 +7,11 @@
 	./../../../modules/system/default.nix
     ];
     config.modules = {
-	# GUI
-	steam.enable = true;
-	desktopApps.enable = true;
-	#CLI
-    zsh.enable = true;
-	#SYSTEM
-    hyprland.enable = true;
-	packages.enable = true;
-    globalprotect.enable = true;
+		steam.enable = true;
+		desktopApps.enable = true;
+		zsh.enable = true;
+		hyprland.enable = true;
+		packages.enable = true;
+		globalprotect.enable = true;
     };
 }
