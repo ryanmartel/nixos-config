@@ -12,7 +12,7 @@ in {
 			obs-studio
 			spotify
 # Broken?			teams
-			slack-term
+			slack
 		];	
     };
 }
