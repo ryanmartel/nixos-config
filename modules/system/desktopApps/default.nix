@@ -11,7 +11,7 @@ in {
 			gimp
 			obs-studio
 			spotify
-			teams
+# Broken?			teams
 			slack-term
 		];	
     };
