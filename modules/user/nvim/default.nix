@@ -33,7 +33,7 @@ in {
 				shiftwidth = 4;
 				tabstop = 4;
 				softtabstop = 4;
-				expandTabs = true;
+				expandtab = true;
 
 				swapfile = false;
 				backup = false;
