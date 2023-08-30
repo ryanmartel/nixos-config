@@ -11,6 +11,7 @@ in {
 			gimp
 			obs-studio
 			spotify
+			slack
 			teams
 		];	
     };
