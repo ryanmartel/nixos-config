@@ -23,6 +23,14 @@ in {
 			'';
 		};
 
+        windowRules = mkOption {
+            type = types.lines;
+            default = import ./windowRules.nix;
+            description = ''
+                Window Rules for hyprland config.
+            '';
+        };
+
 		keybinds = mkOption {
 			type = types.lines;
 			default = import ./keybinds.nix;
@@ -67,7 +75,7 @@ in {
     config = mkIf cfg.enable {
         wayland.windowManager.hyprland = {
             enable = true;
-            extraConfig = cfg.baseConfig + cfg.executions + cfg.keybinds + cfg.extraConfig + cfg.monitor;
+            extraConfig = cfg.baseConfig + cfg.executions + cfg.keybinds + cfg.extraConfig + cfg.monitor + cfg.windowRules;
         };
         services = {
             clipman = {
