@@ -25,6 +25,10 @@ in {
 				vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 				'';
 
+            extraPlugins = [
+                pkgs.vimPlugins.distant-nvim
+            ];
+
 			# Options
 			options = {
 				number = true;
