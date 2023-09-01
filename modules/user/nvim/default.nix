@@ -26,7 +26,7 @@ in {
 				'';
 
             extraPlugins = [
-                pkgs.vimPlugins.distant-nvim
+               pkgs.vimPlugins.distant-nvim
             ];
 
 			# Options
