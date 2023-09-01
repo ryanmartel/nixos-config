@@ -23,11 +23,8 @@ in {
 
 			extraConfigLua = ''
 				vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+                		require("distant"):setup()
 				'';
-
-            extraPlugins = [
-               pkgs.vimPlugins.distant-nvim
-            ];
 
 			# Options
 			options = {
@@ -92,6 +89,11 @@ in {
 
 			};
 			# Plugins
+
+            extraPlugins = with pkgs.vimPlugins; [
+                distant-nvim
+            ];
+
 			plugins = {
 				auto-save.enable = true;
 				fugitive.enable = true;
