@@ -12,6 +12,7 @@ in {
 	    wget
 	    git
 	    curl
+        sshfs
 	];
     };
 }
