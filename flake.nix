@@ -48,6 +48,7 @@
 			#				Architecture	Hostname
 			RPM = mkSystem inputs.nixpkgs "x86_64-linux" "RPM";
 			RPM-Laptop = mkSystem inputs.nixpkgs "x86_64-linux" "RPM-Laptop";
+            duke = mkSystem inputs.nixpkgs "x86_64-linux" "duke";
 		};
 	};
 }
