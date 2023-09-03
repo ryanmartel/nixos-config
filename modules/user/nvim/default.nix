@@ -88,6 +88,7 @@ in {
 
 			};
 			# Plugins
+
 			plugins = {
 				auto-save.enable = true;
 				fugitive.enable = true;
