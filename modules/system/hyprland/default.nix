@@ -30,12 +30,12 @@ in {
             swayidle # idle timeout
            # swaylock # lock screen
           #  wlogout # logout menu
-           # wl-clipboard # copy and pasting
+            wl-clipboard # copy and pasting
 #            wf-recorder # screen capture
             pipewire
   #          wireguard-tools
-            #grim # screenshots
-            #slurp # select region to screenshot
+            grim # screenshots
+            slurp # select region to screenshot
             #mako # notifications
             libsForQt5.dolphin # file explorer
         ];
