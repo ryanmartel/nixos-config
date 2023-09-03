@@ -10,3 +10,4 @@
         zsh.enable = true;
         packages.enable = true;
     };
+}
