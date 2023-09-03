@@ -86,7 +86,7 @@
   services.openssh = {
     enable = true;
     ports = [ 22 ];
-    settings.passwordAuthentication = false;
+    settings.PasswordAuthentication = false;
   };
 
   # Open ports in the firewall.
