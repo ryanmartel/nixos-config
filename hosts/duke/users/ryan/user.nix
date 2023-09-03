@@ -13,6 +13,7 @@
             nvim.enable = true;
             zsh.enable = true;
             packages.enable = true;
+            kitty.enable = true;
         };
     };
 }
