@@ -18,7 +18,6 @@
   boot.supportedFilesystems = [ "zfs" ];
   boot.zfs.forceImportRoot = false;
 
-  networking.hostName = "duke"; # Define your hostname.
   # HostId generated via head /etc/machine-id
   networking.hostId = "c8457f14";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
