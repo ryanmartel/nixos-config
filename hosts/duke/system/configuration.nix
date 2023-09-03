@@ -57,17 +57,11 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # DOCKER
-  virtualisation.docker = {
-    enable = true;
-    enableOnBoot = true;
-  };
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ryan = {
     isNormalUser = true;
     description = "Ryan Martel";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
 
@@ -77,16 +71,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-    git
-    vim
-    wget
-    curl
-  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
