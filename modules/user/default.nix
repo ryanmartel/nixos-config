@@ -3,6 +3,7 @@
 {
 	imports = [
 		# GUI
+        ./discord
 		
 		# CLI
 		./kitty

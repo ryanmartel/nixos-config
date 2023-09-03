@@ -10,6 +10,7 @@
 	config = {
 		modules = {
 			# GUI
+            discord.enable = true;
 
 			# CLI
 			kitty.enable = true;	
