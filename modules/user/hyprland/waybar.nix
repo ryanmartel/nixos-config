@@ -5,7 +5,7 @@
         height = 32;
         modules-left = [ "hyprland/workspaces" "hyprland/submap"];
         modules-center = [ "clock" ];
-        modules-right = [ "network" ];
+        modules-right = [ "network" "battery" ];
 
         "hyprland/submap" = {
             format = " {}";
@@ -29,7 +29,24 @@
 		"network" = {
 			format-ethernet = "";
 			format-disconnected = "󰌙";
+            format-wifi = "{icon}";
+            format-icons = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
 			tooltip-format = "{ipaddr} / {cidr}";
 		};
+
+        "battery" = {
+            bat = "BAT0";
+            interval = 10;
+            states = {
+                warning = 30;
+                critical = 15;
+            };
+            format = "{icon}";
+            format-icons = {
+                discharging = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+                charging = [ "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰢞" "󰂊" "󰂋"];
+                full = [ "󰂅" ];
+            };
+        };
     };
 }

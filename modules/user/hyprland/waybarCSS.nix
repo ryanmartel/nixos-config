@@ -28,4 +28,7 @@
 	#network {
 		padding: 0 10px;
 	}
+    #battery {
+        padding: 0 10px;
+    }
 ''
