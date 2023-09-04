@@ -23,6 +23,10 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # IWD backend for wifi
+  networking.wireless.iwd.enable = true;
+  networking.networkmanager.wifi.backend = "iwd";
+
   # Bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
