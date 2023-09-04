@@ -7,7 +7,6 @@ in {
     options.modules.packages = { enable = mkEnableOption "packages"; };
     config = mkIf cfg.enable {
 	environment.systemPackages = with pkgs; [
-		libsForQt5.konsole
 	    vim
 	    wget
 	    git
