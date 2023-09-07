@@ -38,6 +38,29 @@ bind = $mainMod, 8, workspace, 8
 bind = $mainMod, 9, workspace, 9
 bind = $mainMod, 0, workspace, 10
 
+# Moonlander keybindings
+bind = $mainMod_ALT_SHIFT_CTRL, H, workspace, 1
+bind = $mainMod_ALT_SHIFT_CTRL, J, workspace, 2
+bind = $mainMod_ALT_SHIFT_CTRL, K, workspace, 3
+bind = $mainMod_ALT_SHIFT_CTRL, L, workspace, 4
+bind = $mainMod_ALT_SHIFT_CTRL, ;, workspace, 5
+bind = $mainMod_ALT_SHIFT_CTRL, Y, workspace, 6
+bind = $mainMod_ALT_SHIFT_CTRL, U, workspace, 7
+bind = $mainMod_ALT_SHIFT_CTRL, I, workspace, 8
+bind = $mainMod_ALT_SHIFT_CTRL, O, workspace, 9
+bind = $mainMod_ALT_SHIFT_CTRL, P, workspace, 10
+bind = ALT_SHIFT_CTRL, H, movetoworkspacesilent, 1
+bind = ALT_SHIFT_CTRL, J, movetoworkspacesilent, 2
+bind = ALT_SHIFT_CTRL, K, movetoworkspacesilent, 3
+bind = ALT_SHIFT_CTRL, L, movetoworkspacesilent, 4
+bind = ALT_SHIFT_CTRL, ;, movetoworkspacesilent, 5
+bind = ALT_SHIFT_CTRL, Y, movetoworkspacesilent, 6
+bind = ALT_SHIFT_CTRL, U, movetoworkspacesilent, 7
+bind = ALT_SHIFT_CTRL, I, movetoworkspacesilent, 8
+bind = ALT_SHIFT_CTRL, O, movetoworkspacesilent, 9
+bind = ALT_SHIFT_CTRL, P, movetoworkspacesilent, 10
+
+
 # Move active window to a workspace with mainMod + SHIFT + [0-9]
 bind = $mainMod SHIFT, 1, movetoworkspacesilent, 1
 bind = $mainMod SHIFT, 2, movetoworkspacesilent, 2
