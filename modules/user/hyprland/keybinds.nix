@@ -82,5 +82,5 @@ bindm = $mainMod, mouse:272, movewindow
 bindm = $mainMod, mouse:273, resizewindow
 
 # Clipboard management
-bind = SUPER, V, exec, clipman pick -t wofi
+#bind = SUPER, V, exec, clipman pick -t wofi
 ''
