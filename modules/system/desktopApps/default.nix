@@ -13,7 +13,8 @@ in {
 			obs-studio
 			spotify
 			slack
-			teams
+#			teams
+            calibre
 		];	
     };
 }
