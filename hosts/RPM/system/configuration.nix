@@ -7,6 +7,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 10;
 
+  boot.supportedFilesystems = [ "ntfs" ];
   # Garbage collection
   nix.gc = {
     automatic = true;
