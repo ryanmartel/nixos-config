@@ -15,7 +15,6 @@ in {
 			slack
 #			teams
             calibre
-            wacomtablet
 		];	
     };
 }
