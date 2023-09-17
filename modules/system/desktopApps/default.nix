@@ -15,6 +15,7 @@ in {
 			slack
 #			teams
             calibre
+            gnome.cheese
 		];	
     };
 }
