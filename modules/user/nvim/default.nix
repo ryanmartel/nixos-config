@@ -31,7 +31,10 @@ in {
                 nvim-cmp
                 trouble-nvim
                 nvim-autopairs
+
                 luasnip
+                cmp-path
+                cmp-buffer
                 cmp_luasnip
                 cmp-nvim-lsp
                 nvim-web-devicons
