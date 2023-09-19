@@ -21,6 +21,11 @@ in {
             extraPackages = with pkgs; [
             ];
 
+            extraLuaConfig = ''
+                ${builtins.readFile ./lua/options.lua}
+                ${builtins.readFile ./lua/remap.lua}
+            '';
+
             plugins = with pkgs.vimPlugins; [
                 nvim-lspconfig
                 nvim-cmp
@@ -69,7 +74,6 @@ in {
                 telescope-nvim
                 vimsence
                 toggleterm-nvim
-                nvim-treesitter-context
                 comment-nvim
             ];
         };
