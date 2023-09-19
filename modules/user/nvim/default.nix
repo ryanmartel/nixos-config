@@ -96,7 +96,7 @@ in {
                 }
                 {
                     plugin = toggleterm-nvim;
-                    config = toLuaFile ./lua/plugins/toggleterm.lue;
+                    config = toLuaFile ./lua/plugins/toggleterm.lua;
                 }
                 {
                     plugin = comment-nvim;
