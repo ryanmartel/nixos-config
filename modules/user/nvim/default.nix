@@ -59,16 +59,22 @@ in {
                         p.tree-sitter-rust
                         p.tree-sitter-sql
                     ]));
-                    config = toLuaFile ./lua/plugin/treesitter.lua
+                    config = toLuaFile ./lua/plugin/treesitter.lua;
                 }
                 {
                     plugin = nvim-treesitter-context;
-                    config = toLua ''require("treesitter-context").setup{enable=true, max_lines=0,}''
+                    config = toLua ''require("treesitter-context").setup{enable=true, max_lines=0,}'';
+                }
+                {
+                    plugin = undotree;
+                    config = toLua ''vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)'';
+                }
+                {
+                    plugin = harpoon;
+                    config = toLuaFile ./lua/plugin/harpoon.lua;
                 }
                 vim-fugitive
                 trouble-nvim
-                undotree
-                harpoon
                 nvim-autopairs
                 lualine-nvim
                 telescope-nvim
