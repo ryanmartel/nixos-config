@@ -26,13 +26,35 @@ in {
                 nvim-cmp
                 {
                     plugin = lsp-zero-nvim;
-                    config = ./nvim/plugin/lsp.lua;
+                    config = toLuaFile ./nvim/plugin/lsp.lua;
                 }
 
                 {
                     plugin = tokyonight-nvim;
-                    config = ''require("tokyonight").setup({style="night", transparent=true})'';
+                    config = toLua ''require("tokyonight").setup({style="night", transparent=true})'';
                 }
+                {
+                    plugin = (nvim-treesitter.withPlugins (p: [
+                        p.tree-sitter-nix
+                        p.tree-sitter-vim
+                        p.tree-sitter-bash
+                        p.tree-sitter-lua
+                        p.tree-sitter-python
+                        p.tree-sitter-json
+                        p.tree-sitter-java
+                        p.tree-sitter-c
+                        p.tree-sitter-cmake
+                        p.tree-sitter-cpp
+                        p.tree-sitter-css
+                        p.tree-sitter-dockerfile
+                        p.tree-sitter-go
+                        p.tree-sitter-html
+                        p.tree-sitter-javascript
+                        p.tree-sitter-make
+                        p.tree-sitter-rust
+                        p.tree-sitter-sql
+                    ]));
+                    config = toLuaFile ./lua/plugin/treesitter.lua
                 vim-fugitive
                 trouble-nvim
                 undotree
