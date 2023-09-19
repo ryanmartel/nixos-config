@@ -31,7 +31,7 @@ in {
                 nvim-cmp
                 {
                     plugin = lsp-zero-nvim;
-                    config = toLuaFile ./nvim/plugin/lsp.lua;
+                    config = toLuaFile ./nvim/plugins/lsp.lua;
                 }
 
                 {
@@ -59,7 +59,7 @@ in {
                         p.tree-sitter-rust
                         p.tree-sitter-sql
                     ]));
-                    config = toLuaFile ./lua/plugin/treesitter.lua;
+                    config = toLuaFile ./lua/plugins/treesitter.lua;
                 }
                 {
                     plugin = nvim-treesitter-context;
@@ -71,7 +71,7 @@ in {
                 }
                 {
                     plugin = harpoon;
-                    config = toLuaFile ./lua/plugin/harpoon.lua;
+                    config = toLuaFile ./lua/plugins/harpoon.lua;
                 }
                 vim-fugitive
                 trouble-nvim
