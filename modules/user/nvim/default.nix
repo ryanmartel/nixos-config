@@ -22,11 +22,22 @@ in {
             ];
 
             plugins = with pkgs.vimPlugins; [
+                nvim-lspconfig
+                nvim-cmp
                 {
-                    plugin = nvim-lspconfig;
-                    config = toLuaFile ./
+                    plugin = lsp-zero-nvim;
+                    config = ./nvim/plugin/lsp.lua;
                 }
-            ]
+
+                {
+                    plugin = tokyonight-nvim;
+                    config = ''require("tokyonight").setup({style="night", transparent=true})'';
+                }
+                vim-fugitive
+                trouble-nvim
+
+
+            ];
         };
     };
 }
