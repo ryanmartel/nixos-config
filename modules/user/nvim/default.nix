@@ -89,9 +89,12 @@ in {
                     plugin = toggleterm-nvim;
                     config = toLuaFile ./lua/plugins/toggleterm.lue;
                 }
+                {
+                    plugin = comment-nvim;
+                    config = toLua ''require("Comment").setup()'';
+                }
                 trouble-nvim
                 nvim-autopairs
-                comment-nvim
             ];
         };
     };
