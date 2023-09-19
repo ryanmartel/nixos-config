@@ -35,8 +35,16 @@ in {
                 }
                 vim-fugitive
                 trouble-nvim
-
-
+                undotree
+                harpoon
+                nvim-autopairs
+                lualine-nvim
+                telescope-nvim
+                vimsence
+                toggleterm-nvim
+                nvim-treesitter
+                nvim-treesitter-context
+                comment-nvim
             ];
         };
     };
