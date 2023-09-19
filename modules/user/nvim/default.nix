@@ -55,6 +55,11 @@ in {
                         p.tree-sitter-sql
                     ]));
                     config = toLuaFile ./lua/plugin/treesitter.lua
+                }
+                {
+                    plugin = nvim-treesitter-context;
+                    config = toLua ''require("treesitter-context").setup{enable=true, max_lines=0,}''
+                }
                 vim-fugitive
                 trouble-nvim
                 undotree
@@ -64,7 +69,6 @@ in {
                 telescope-nvim
                 vimsence
                 toggleterm-nvim
-                nvim-treesitter
                 nvim-treesitter-context
                 comment-nvim
             ];
