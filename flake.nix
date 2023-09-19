@@ -5,8 +5,6 @@
 
 		# Official NixOS package source, using nixos-unstable branch here
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-		# NVIM packages and configuration
-		nixvim.url = "github:nix-community/nixvim";
 		# Hyprland
 		hyprland.url = "github:hyprwm/Hyprland";
 		# home-manager, used for managing user configuration
@@ -16,7 +14,7 @@
 		};
 	};
 
-	outputs = inputs@{ self, nixpkgs, home-manager, hyprland, nixvim, ... }:  
+	outputs = inputs@{ self, nixpkgs, home-manager, hyprland, ... }:  
 		let
 			system = "x86_64-linux"; 
 			pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
