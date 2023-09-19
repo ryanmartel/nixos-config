@@ -73,11 +73,14 @@ in {
                     plugin = harpoon;
                     config = toLuaFile ./lua/plugins/harpoon.lua;
                 }
+                {
+                    plugin = telescope-nvim;
+                    config = toLuaFile ./lua/plugins/telescope.lua;
+                }
                 vim-fugitive
                 trouble-nvim
                 nvim-autopairs
                 lualine-nvim
-                telescope-nvim
                 vimsence
                 toggleterm-nvim
                 comment-nvim
