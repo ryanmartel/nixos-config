@@ -29,6 +29,12 @@ in {
             plugins = with pkgs.vimPlugins; [
                 nvim-lspconfig
                 nvim-cmp
+                trouble-nvim
+                nvim-autopairs
+                luasnip
+                cmp_luasnip
+                cmp-nvim-lsp
+                nvim-web-devicons
                 {
                     plugin = lsp-zero-nvim;
                     config = toLuaFile ./nvim/plugins/lsp.lua;
@@ -93,8 +99,6 @@ in {
                     plugin = comment-nvim;
                     config = toLua ''require("Comment").setup()'';
                 }
-                trouble-nvim
-                nvim-autopairs
             ];
         };
     };
