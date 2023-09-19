@@ -77,12 +77,20 @@ in {
                     plugin = telescope-nvim;
                     config = toLuaFile ./lua/plugins/telescope.lua;
                 }
-                vim-fugitive
+                {
+                    plugin = vim-fugitive;
+                    config = toLua ''vim.keymap.set("n", "<leader>gs", vim.cmd.Git)'';
+                }
+                {
+                    plugin = lualine-nvim;
+                    config = toLua ''require("lualine").setup()'';
+                }
+                {
+                    plugin = toggleterm-nvim;
+                    config = toLuaFile ./lua/plugins/toggleterm.lue;
+                }
                 trouble-nvim
                 nvim-autopairs
-                lualine-nvim
-                vimsence
-                toggleterm-nvim
                 comment-nvim
             ];
         };
