@@ -1,4 +1,4 @@
-local lsp = require("lsp-zero").preset({})
+local lsp = require("lsp-zero").preset({name = "recommended"})
 
 lsp.set_preferences({
     suggest_lsp_servers = false,
