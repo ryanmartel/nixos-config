@@ -19,7 +19,7 @@ in {
 		#utils
 		ripgrep
 		bat
-		exa
+		eza
 		fzf
 
 		#misc
