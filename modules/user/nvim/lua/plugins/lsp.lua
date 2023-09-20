@@ -28,7 +28,13 @@ lsp.setup_nvim_cmp({
   mapping = cmp_mappings
 })
 
-lsp.setup_servers({'java_language_server', 'eslint', 'rust_analyzer', 'clangd', 'rnix'})
+lsp.configure('java_language_server', {
+    cmd = {'java-language-server'},
+})
+-- lsp.configure('jdtls', {
+--     cmd = {'jdt-language-server'},
+-- })
+lsp.setup_servers({'eslint', 'rust_analyzer', 'clangd', 'rnix'})
 
 
 lsp.on_attach(function(client, bufnr)

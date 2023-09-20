@@ -25,6 +25,7 @@ in {
                 nodePackages.eslint
                 clang-tools
                 java-language-server
+                # jdt-language-server
             ];
 
             extraLuaConfig = ''
