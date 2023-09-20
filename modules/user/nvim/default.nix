@@ -19,9 +19,16 @@ in {
             vimdiffAlias = true;
 
             extraPackages = with pkgs; [
+                rnix-lsp
+                rust-analyzer
+                luajitPackages.lua-lsp
+                nodePackages.eslint
+                clang-tools
+                java-language-server
             ];
 
             extraLuaConfig = ''
+                vim.g.mapleader = " "
                 ${builtins.readFile ./lua/options.lua}
                 ${builtins.readFile ./lua/remap.lua}
             '';
@@ -30,7 +37,6 @@ in {
                 nvim-lspconfig
                 nvim-cmp
                 trouble-nvim
-                nvim-autopairs
 
                 luasnip
                 cmp-path
@@ -40,12 +46,15 @@ in {
                 nvim-web-devicons
                 {
                     plugin = lsp-zero-nvim;
-                    config = toLuaFile ./nvim/plugins/lsp.lua;
+                    config = toLuaFile ./lua/plugins/lsp.lua;
                 }
 
                 {
                     plugin = tokyonight-nvim;
-                    config = toLua ''require("tokyonight").setup({style="night", transparent=true})'';
+                    config = toLua ''
+                        require("tokyonight").setup({style="night", transparent=true})
+                        vim.cmd[[colorscheme tokyonight]]
+                    '';
                 }
                 {
                     plugin = (nvim-treesitter.withPlugins (p: [
@@ -72,11 +81,10 @@ in {
                 }
                 {
                     plugin = nvim-treesitter-context;
-                    config = toLua ''require("treesitter-context").setup{enable=true, max_lines=0,}'';
+                    config = toLua ''require("treesitter-context").setup{enable=true, max_lines=1,}'';
                 }
                 {
                     plugin = undotree;
-                    config = toLua ''vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)'';
                 }
                 {
                     plugin = harpoon;
@@ -88,7 +96,6 @@ in {
                 }
                 {
                     plugin = vim-fugitive;
-                    config = toLua ''vim.keymap.set("n", "<leader>gs", vim.cmd.Git)'';
                 }
                 {
                     plugin = lualine-nvim;
@@ -102,6 +109,14 @@ in {
                     plugin = comment-nvim;
                     config = toLua ''require("Comment").setup()'';
                 }
+                {
+                    plugin = nvim-autopairs;
+                    config = toLua ''require("nvim-autopairs").setup()'';
+                }
+                /* {
+                    plugin = nvim-jdtls;
+                    config = toLuaFile ./lua/plugins/jdtls.lua;
+                } */
             ];
         };
     };

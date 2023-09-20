@@ -1,4 +1,6 @@
-local lsp = require("lsp-zero").preset({name = "recommended"})
+vim.g.mapleader = " "
+local lsp = require("lsp-zero").preset({
+    name = "recommended"})
 
 lsp.set_preferences({
     suggest_lsp_servers = false,
@@ -26,6 +28,7 @@ lsp.setup_nvim_cmp({
   mapping = cmp_mappings
 })
 
+lsp.setup_servers({'java_language_server', 'eslint', 'rust_analyzer', 'clangd', 'rnix'})
 
 
 lsp.on_attach(function(client, bufnr)
