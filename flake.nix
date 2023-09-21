@@ -5,6 +5,8 @@
 
 		# Official NixOS package source, using nixos-unstable branch here
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+        # Current stable
+        nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-23.05";
 		# Hyprland
 		hyprland.url = "github:hyprwm/Hyprland";
 		# home-manager, used for managing user configuration
@@ -14,7 +16,7 @@
 		};
 	};
 
-	outputs = inputs@{ self, nixpkgs, home-manager, hyprland, ... }:  
+	outputs = inputs@{ self, nixpkgs, nixpkgs-stable, home-manager, hyprland, ... }:  
 		let
 			system = "x86_64-linux"; 
 			pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
@@ -24,6 +26,12 @@
 	mkSystem = pkgs: system: hostname:
 		pkgs.lib.nixosSystem {
 			system = system;
+            specialArgs = {
+                pkgs-stable = import nixpkgs-stable {
+                    system = system;
+                    config.allowUnfree = true;
+                };
+            };
 			modules = [
 			{ networking.hostName = hostname; }
 			(./. + "/hosts/${hostname}/system/system.nix")

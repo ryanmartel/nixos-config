@@ -12,5 +12,6 @@
         ./hyprland
         ./globalprotect
 		./laptopcontrols
+        ./stable
 	];
 }
