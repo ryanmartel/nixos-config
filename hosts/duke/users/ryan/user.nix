@@ -2,7 +2,6 @@
 
 {
     imports = [
-        inputs.nixvim.homeManagerModules.nixvim
         ./../../../../modules/user/default.nix
         ./home.nix
     ];
