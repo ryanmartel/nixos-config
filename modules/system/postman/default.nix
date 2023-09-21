@@ -1,19 +1,22 @@
-{ stdenvNoCC, callPackage, lib }:
+{ pkgs, lib, config, ... }:
 
-let
-  pname = "postman";
-  version = "10.18.0";
-  meta = with lib; {
-    homepage = "https://www.getpostman.com";
-    description = "API Development Environment";
-    sourceProvenance = with sourceTypes; [ binaryNativeCode ];
-    license = licenses.postman;
-    platforms = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin" ];
-    maintainers = with maintainers; [ johnrichardrinehart evanjs tricktron Crafter ];
-  };
-
-in
-
-if stdenvNoCC.isDarwin
-then callPackage ./darwin.nix { inherit pname version meta; }
-else callPackage ./linux.nix { inherit pname version meta; }
+with lib;
+let cfg = config.modules.postman;
+          pname = "postman";
+          version = "10.18.0";
+          meta = with lib; {
+            homepage = "https://www.getpostman.com";
+            description = "API Development Environment";
+            sourceProvenance = with sourceTypes; [ binaryNativeCode ];
+            license = licenses.postman;
+            platforms = [ "x86_64-linux" ];
+            maintainers = with maintainers; [ johnrichardrinehart evanjs tricktron Crafter ];
+          };
+in {
+    options.modules.postman = { enable = mkEnableOption "postman"; };
+    config = mkIf cfg.enable {
+        environment.systemPackages = [
+            pkgs.callPackage ./linux.nix { inherit pname version meta; }
+        ];
+    };
+}
