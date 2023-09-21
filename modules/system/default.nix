@@ -12,7 +12,6 @@
         ./hyprland
         ./globalprotect
 		./laptopcontrols
-        ./stable
         ./postman
 	];
 }

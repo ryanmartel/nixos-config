@@ -3,7 +3,7 @@
 with lib;
 let cfg = config.modules.postman;
           pname = "postman";
-          version = "10.18.0";
+          version = "10.18.4";
           meta = with lib; {
             homepage = "https://www.getpostman.com";
             description = "API Development Environment";
@@ -16,7 +16,7 @@ in {
     options.modules.postman = { enable = mkEnableOption "postman"; };
     config = mkIf cfg.enable {
         environment.systemPackages = [
-            pkgs.callPackage ./linux.nix { inherit pname version meta; }
+            (pkgs.callPackage ./linux.nix { inherit pname version meta; })
         ];
     };
 }
