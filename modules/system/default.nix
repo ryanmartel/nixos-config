@@ -13,5 +13,6 @@
         ./globalprotect
 		./laptopcontrols
         ./stable
+        ./postman
 	];
 }

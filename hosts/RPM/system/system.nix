@@ -13,6 +13,6 @@
 		hyprland.enable = true;
 		packages.enable = true;
 		globalprotect.enable = true;
-        stable.enable = true;
+        stable.enable = false;
     };
 }
