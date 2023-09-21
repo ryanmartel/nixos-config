@@ -16,6 +16,7 @@ in {
 #			teams
             calibre
             gnome.cheese
+            postman
 		];	
     };
 }
