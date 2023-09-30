@@ -25,6 +25,9 @@ in {
                 nodePackages.eslint
                 clang-tools
                 java-language-server
+                vscode-langservers-extracted
+                eslint_d
+                nodePackages.typescript-language-server
                 # jdt-language-server
             ];
 

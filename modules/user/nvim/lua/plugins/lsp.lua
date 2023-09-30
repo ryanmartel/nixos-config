@@ -34,7 +34,7 @@ lsp.configure('java_language_server', {
 -- lsp.configure('jdtls', {
 --     cmd = {'jdt-language-server'},
 -- })
-lsp.setup_servers({'eslint', 'rust_analyzer', 'clangd', 'rnix'})
+lsp.setup_servers({'tsserver', 'rust_analyzer', 'clangd', 'rnix'})
 
 
 lsp.on_attach(function(client, bufnr)
