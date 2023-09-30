@@ -16,10 +16,9 @@ in {
 			obs-studio
 			spotify
 			slack
-#			teams
             calibre
             gnome.cheese
-            # postman
+            vscode
 		];	
     };
 }
