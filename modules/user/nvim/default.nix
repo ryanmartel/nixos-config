@@ -6,6 +6,8 @@ let cfg = config.modules.nvim;
 in {
     options.modules.nvim = { enable = mkEnableOption "nvim"; };
     config = mkIf cfg.enable {
+        home.file.".config/nvim/ftplugin/java.lua".source = ./lua/plugins/jdtls.lua;
+
         programs.neovim = 
         let
             toLua = str: "lua << EOF\n${str}\nEOF\n";
@@ -41,6 +43,7 @@ in {
                 nvim-lspconfig
                 nvim-cmp
                 trouble-nvim
+                nvim-jdtls
 
                 luasnip
                 cmp-path

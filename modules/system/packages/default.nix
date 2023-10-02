@@ -12,6 +12,7 @@ in {
 	    git
 	    curl
         sshfs
+        jdt-language-server
 	];
     };
 }
