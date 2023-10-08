@@ -26,7 +26,7 @@ in {
                 luajitPackages.lua-lsp
                 nodePackages.eslint
                 clang-tools
-                java-language-server
+                # java-language-server
                 vscode-langservers-extracted
                 eslint_d
                 nodePackages.typescript-language-server
