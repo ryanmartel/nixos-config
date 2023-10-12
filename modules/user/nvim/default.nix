@@ -21,6 +21,7 @@ in {
             vimdiffAlias = true;
 
             extraPackages = with pkgs; [
+                zls
                 rnix-lsp
                 rust-analyzer
                 luajitPackages.lua-lsp

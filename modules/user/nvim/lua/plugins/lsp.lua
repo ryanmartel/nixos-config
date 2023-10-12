@@ -34,7 +34,7 @@ lsp.setup_nvim_cmp({
 -- lsp.configure('jdtls', {
 --     cmd = {'jdt-language-server'},
 -- })
-lsp.setup_servers({'tsserver', 'rust_analyzer', 'clangd', 'rnix'})
+lsp.setup_servers({'zls', 'tsserver', 'rust_analyzer', 'clangd', 'rnix'})
 
 
 lsp.on_attach(function(client, bufnr)
