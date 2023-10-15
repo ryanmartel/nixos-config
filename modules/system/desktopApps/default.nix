@@ -11,6 +11,7 @@ in {
     config = mkIf cfg.enable {
 		environment.systemPackages = with pkgs; [
             libsForQt5.konsole
+            libsForQt5.okular
 			google-chrome
 			gimp
 			obs-studio
