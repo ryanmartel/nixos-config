@@ -45,6 +45,7 @@ in {
                 nvim-cmp
                 trouble-nvim
                 nvim-jdtls
+                vimsence
 
                 luasnip
                 cmp-path
