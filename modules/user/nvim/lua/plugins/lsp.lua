@@ -28,9 +28,9 @@ lsp.setup_nvim_cmp({
   mapping = cmp_mappings
 })
 
--- lsp.configure('java_language_server', {
---     cmd = {'java-language-server'},
--- })
+lsp.configure('java_language_server', {
+    cmd = {'java-language-server'},
+})
 -- lsp.configure('jdtls', {
 --     cmd = {'jdt-language-server'},
 -- })

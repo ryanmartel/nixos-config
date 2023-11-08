@@ -6,7 +6,7 @@ let cfg = config.modules.nvim;
 in {
     options.modules.nvim = { enable = mkEnableOption "nvim"; };
     config = mkIf cfg.enable {
-        home.file.".config/nvim/ftplugin/java.lua".source = ./lua/plugins/jdtls.lua;
+        #home.file.".config/nvim/ftplugin/java.lua".source = ./lua/plugins/jdtls.lua;
 
         programs.neovim = 
         let
@@ -27,7 +27,7 @@ in {
                 luajitPackages.lua-lsp
                 nodePackages.eslint
                 clang-tools
-                # java-language-server
+                java-language-server
                 vscode-langservers-extracted
                 eslint_d
                 nodePackages.typescript-language-server
@@ -44,7 +44,7 @@ in {
                 nvim-lspconfig
                 nvim-cmp
                 trouble-nvim
-                nvim-jdtls
+                #nvim-jdtls
 
                 luasnip
                 cmp-path
@@ -121,10 +121,6 @@ in {
                     plugin = nvim-autopairs;
                     config = toLua ''require("nvim-autopairs").setup()'';
                 }
-                /* {
-                    plugin = nvim-jdtls;
-                    config = toLuaFile ./lua/plugins/jdtls.lua;
-                } */
             ];
         };
     };
