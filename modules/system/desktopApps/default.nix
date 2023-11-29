@@ -20,6 +20,7 @@ in {
             calibre
             gnome.cheese
             vscode
+            teams-for-linux
 		];	
     };
 }
