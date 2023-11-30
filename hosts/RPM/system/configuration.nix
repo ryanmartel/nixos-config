@@ -97,7 +97,7 @@
   users.users.ryan = {
     isNormalUser = true;
     description = "Ryan Martel";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" ];
     packages = with pkgs; [
       firefox
     ];
