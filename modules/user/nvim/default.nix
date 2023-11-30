@@ -26,6 +26,7 @@ in {
                 rust-analyzer
                 luajitPackages.lua-lsp
                 nodePackages.eslint
+                nodePackages.pyright
                 clang-tools
                 # java-language-server
                 vscode-langservers-extracted
