@@ -1,5 +1,5 @@
 let 
-bgImage = ../../../static/magical-valley.webp;
+bgImage = ../../../static/magical-valley.jpg;
 in
 ''
 # Execute your favorite apps at launch
