@@ -94,5 +94,8 @@ gestures {
 device:epic-mouse-v1 {
     sensitivity = -0.5
 }
+bind=,XF86AudioMute, exec, wpctl set-mute #DEFAULT_SINK@ toggle
+bind=,XF86AudioLowerVolume, exec, wpctl set-volume -l 1.0 @DEFAULT_SINK@ 5%-
+bind=,XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.0 @DEFAULT_SINK@ 5%+
 
 ''
