@@ -1,14 +1,20 @@
 ''
     * {
         border: none;
-        border-radius: 0;
+        border-radius: 20px;
+        margin-top: 2px;
         font-family: JetBrainsMono;
-        font-size: 15px;
+        font-size: 14px;
     }
 
     window#waybar {
-        background: #16191C;
-        color: #AAB2BF;
+        background: rgba(22,25,28,0.8);
+        border-radius: 20px;
+    }
+
+    #workspaces, #clock, #network, #battery {
+        background: #073642;
+        padding: 3px;
     }
 
     #workspaces button {
@@ -26,7 +32,7 @@
         min-width: 140px;
     }
 	#network {
-		padding: 0 10px;
+		padding: 0 20px 0 10px;
 	}
     #battery {
         padding: 0 10px;

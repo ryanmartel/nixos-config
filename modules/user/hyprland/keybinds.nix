@@ -1,5 +1,5 @@
 let 
-	bgImage = ../../../static/magical-valley.jpg;
+	bgImage = ../../../static/eagle.png;
 in
 ''
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
