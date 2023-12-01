@@ -9,6 +9,8 @@
         nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-23.05";
 		# Hyprland
 		hyprland.url = "github:hyprwm/Hyprland";
+        # Nix colors
+        nix-colors.url = "github:misterio77/nix-colors";
 		# home-manager, used for managing user configuration
 		home-manager = {
 			url = "github:nix-community/home-manager";
@@ -16,7 +18,7 @@
 		};
 	};
 
-	outputs = inputs@{ self, nixpkgs, nixpkgs-stable, home-manager, hyprland, ... }:  
+	outputs = inputs@{ self, nixpkgs, nixpkgs-stable, home-manager, nix-colors, hyprland, ... }:  
 		let
 			system = "x86_64-linux"; 
 			pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;

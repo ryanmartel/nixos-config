@@ -3,10 +3,13 @@
 {
 	imports = [
 		inputs.hyprland.homeManagerModules.default
+        inputs.nix-colors.homeManagerModules.default
 		./../../../../modules/user/default.nix 
 		./home.nix
 	];
 	config = {
+        colorScheme = inputs.nix-colors.colorSchemes.seti;
+
 		modules = {
 			# GUI
             discord.enable = true;
