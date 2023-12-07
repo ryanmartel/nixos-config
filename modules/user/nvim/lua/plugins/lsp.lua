@@ -23,10 +23,10 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 
 cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
-
-lsp.setup_nvim_cmp({
-  mapping = cmp_mappings
-})
+--
+-- lsp.setup_nvim_cmp({
+--   mapping = cmp_mappings
+-- })
 
 -- lsp.configure('java_language_server', {
 --     cmd = {'java-language-server'},
@@ -54,6 +54,13 @@ end)
 
 lsp.setup()
 
+cmp.setup({
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    },
+    mapping = cmp_mappings
+})
 vim.diagnostic.config({
     virtual_text = true
 })

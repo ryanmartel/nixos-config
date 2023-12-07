@@ -65,7 +65,7 @@ in {
 
 		waybarCSS = mkOption {
 			type = types.lines;
-			default = import ./waybarCSS.nix;
+			default = import ./waybarCSS.nix{ inherit config; };
 			description = ''
 				StyleSheet for waybar configuration.
 			'';

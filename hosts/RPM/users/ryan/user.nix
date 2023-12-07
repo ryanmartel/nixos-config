@@ -8,8 +8,6 @@
 		./home.nix
 	];
 	config = {
-        # colorScheme = inputs.nix-colors.colorSchemes.material-darker;
-        # colorScheme = inputs.nix-colors.colorSchemes.seti;
         colorScheme = {
             slug = "rpm";
             name = "rpm";

@@ -1,7 +1,7 @@
+{ config }:
 ''
     * {
         border: none;
-        border-radius: 20px;
         margin-top: 2px;
         font-family: JetBrainsMono;
         font-size: 14px;
@@ -12,20 +12,22 @@
         border-radius: 20px;
     }
 
+
     #workspaces, #clock, #network, #battery {
-        background: #073642;
-        padding: 3px;
+        background: #${config.colorScheme.colors.base02};
+        border-radius: 20px
     }
+
 
     #workspaces button {
         padding: 0 5px;
     }
     #workspaces button.active {
-        color: #235DBA;
+        color: #${config.colorScheme.colors.base0F};
         padding: 0 5px;
     }
     #workspaces button.focus {
-        background:  #6611FF;
+        background:  #${config.colorScheme.colors.base04};
     }
     #clock {
         margin: 0px 16px 0px 10px;

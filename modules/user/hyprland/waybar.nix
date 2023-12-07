@@ -48,5 +48,11 @@
                 full = [ "󰂅" ];
             };
         };
+        # "wireplumber" = {
+        #     format = "{volume}% {icon}";
+        #     format-muted = "";
+        #     on-click = "pavucontrol";
+        #     format-icons = [ "" "" "" ];
+        # };
     };
 }
