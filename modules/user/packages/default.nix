@@ -11,6 +11,7 @@ in {
 		(nerdfonts.override{ fonts = [ "JetBrainsMono" ]; })
 		neofetch
 		nnn #terminal file manager
+
 		
 		# archives
 		zip
