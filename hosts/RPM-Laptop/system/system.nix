@@ -14,6 +14,6 @@
 		packages.enable = true;
 		globalprotect.enable = true;
 		laptopcontrols.enable = true;
-        postman.enable = true;
+        postman.enable = false;
     };
 }
