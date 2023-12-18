@@ -11,6 +11,7 @@
 		./bash
 		./nvim
         ./zsh
+        ./direnv
 		# SYSTEM
 		./packages
         ./hyprland

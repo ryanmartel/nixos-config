@@ -17,6 +17,7 @@
 			bash.enable = false;
 			nvim.enable = true;
 			zsh.enable = true;
+            direnv.enable = true;
 
 			# SYSTEM
 			packages.enable = true;
