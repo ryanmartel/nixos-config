@@ -17,7 +17,6 @@ in {
 			gimp
 			obs-studio
 			spotify
-			slack
             calibre
             gnome.cheese
             vscode
