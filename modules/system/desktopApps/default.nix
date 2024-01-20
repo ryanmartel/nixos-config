@@ -15,6 +15,7 @@ in {
             qutebrowser
 			google-chrome
 			gimp
+            ranger
 			obs-studio
 			spotify
             calibre
