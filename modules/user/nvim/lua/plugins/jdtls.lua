@@ -7,7 +7,8 @@ local config = {
   -- The command that starts the language server
   -- See: https://github.com/eclipse/eclipse.jdt.ls#running-from-the-command-line
   cmd = {
-    'jdt-language-server',
+    -- 'jdt-language-server',
+    'jdtls', 
     -- See `data directory configuration` section in the README
     '-data', workspace_dir,
   },
