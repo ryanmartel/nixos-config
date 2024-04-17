@@ -34,7 +34,7 @@ cmp_mappings['<S-Tab>'] = nil
 -- lsp.configure('jdtls', {
 --     cmd = {'jdt-language-server'},
 -- })
-lsp.setup_servers({'zls', 'tsserver', 'rust_analyzer', 'clangd', 'rnix', 'pyright'})
+lsp.setup_servers({'zls', 'tsserver', 'rust_analyzer', 'clangd', 'rnix', 'pyright', 'metals'})
 
 
 lsp.on_attach(function(client, bufnr)

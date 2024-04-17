@@ -7,6 +7,7 @@ in {
     options.modules.nvim = { enable = mkEnableOption "nvim"; };
     config = mkIf cfg.enable {
         home.file.".config/nvim/ftplugin/java.lua".source = ./lua/plugins/jdtls.lua;
+        home.file.".config/nvim/ftplugin/scala.lua".source = ./lua/plugins/nvim-metals.lua;
 
         programs.neovim = 
         let
@@ -151,10 +152,8 @@ in {
                     plugin = nvim-autopairs;
                     config = toLua ''require("nvim-autopairs").setup()'';
                 }
-                {
-                    plugin = nvim-metals;
-                    config = toLuaFile ./lua/plugins/nvim-metals.lua;
-                }
+
+
                 /* {
                     plugin = nvim-jdtls;
                     config = toLuaFile ./lua/plugins/jdtls.lua;
