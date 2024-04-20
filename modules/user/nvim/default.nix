@@ -27,6 +27,8 @@ in {
                 luajitPackages.lua-lsp
                 nodePackages.eslint
                 nodePackages.pyright
+                metals
+                coursier
                 clang-tools
                 # java-language-server
                 vscode-langservers-extracted
@@ -47,7 +49,8 @@ in {
                 trouble-nvim
                 nvim-jdtls
                 vimsence
-
+                nvim-metals
+                plenary-nvim
                 luasnip
                 cmp-path
                 cmp-buffer
@@ -149,6 +152,8 @@ in {
                     plugin = nvim-autopairs;
                     config = toLua ''require("nvim-autopairs").setup()'';
                 }
+
+
                 /* {
                     plugin = nvim-jdtls;
                     config = toLuaFile ./lua/plugins/jdtls.lua;
