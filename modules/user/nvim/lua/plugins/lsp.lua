@@ -34,10 +34,9 @@ cmp_mappings['<S-Tab>'] = nil
 -- lsp.configure('jdtls', {
 --     cmd = {'jdt-language-server'},
 -- })
-lsp.setup_servers({'zls', 'tsserver', 'rust_analyzer', 'clangd', 'rnix', 'pyright', 'metals'})
+lsp.setup_servers({'zls', 'tsserver', 'rust_analyzer', 'clangd', 'rnix', 'pyright'})
 
-
-lsp.on_attach(function(client, bufnr)
+default_on_attach = function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
@@ -50,7 +49,10 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
   vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
-end)
+end
+
+
+lsp.on_attach(default_on_attach)
 
 lsp.setup()
 
@@ -64,3 +66,37 @@ cmp.setup({
 vim.diagnostic.config({
     virtual_text = true
 })
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+-- Scala nvim-metals config
+metals_config = require('metals').bare_config()
+metals_config.capabilities = capabilities
+metals_config.on_attach = default_on_attach
+
+metals_config.settings = {
+   -- metalsBinaryPath = "/nix/store/7ck1zj874v10dmraly8sndgnvmc4fl79-metals-1.2.0/bin/metals",
+   showImplicitArguments = true,
+   showImplicitConversionsAndClasses = true,
+   showInferredType = true,
+   -- excludedPackages = {
+   --   "akka.actor.typed.javadsl",
+   --   "com.github.swagger.akka.javadsl"
+   -- }
+}
+
+-- metals_config.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+--   vim.lsp.diagnostic.on_publish_diagnostics, {
+--     virtual_text = {
+--       prefix = '',
+--     }
+--   }
+-- )
+
+-- without doing this, autocommands that deal with filetypes prohibit messages from being shown
+-- vim.opt_global.shortmess:remove("F")
+
+vim.cmd([[augroup lsp]])
+vim.cmd([[autocmd!]])
+vim.cmd([[autocmd FileType java,scala,sbt lua require('metals').initialize_or_attach(metals_config)]])
+vim.cmd([[augroup end]])
