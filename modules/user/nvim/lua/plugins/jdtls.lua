@@ -23,6 +23,11 @@ local config = {
   -- for a list of options
   settings = {
     java = {
+        project = {
+            referencedLibraries = {
+                '/home/ryan/code/csu/453/vapor-parser.jar'
+            }
+        }
     }
   },
 
