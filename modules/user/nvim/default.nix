@@ -56,6 +56,7 @@ in {
                 cmp-buffer
                 cmp_luasnip
                 cmp-nvim-lsp
+                lalrpop-vim
                 nvim-web-devicons
                 {
                     plugin = lsp-zero-nvim;

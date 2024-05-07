@@ -23,17 +23,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 
 cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
---
--- lsp.setup_nvim_cmp({
---   mapping = cmp_mappings
--- })
 
--- lsp.configure('java_language_server', {
---     cmd = {'java-language-server'},
--- })
--- lsp.configure('jdtls', {
---     cmd = {'jdt-language-server'},
--- })
 lsp.setup_servers({'zls', 'tsserver', 'rust_analyzer', 'clangd', 'rnix', 'pyright'})
 
 default_on_attach = function(client, bufnr)
@@ -75,26 +65,11 @@ metals_config.capabilities = capabilities
 metals_config.on_attach = default_on_attach
 
 metals_config.settings = {
-   -- metalsBinaryPath = "/nix/store/7ck1zj874v10dmraly8sndgnvmc4fl79-metals-1.2.0/bin/metals",
    showImplicitArguments = true,
    showImplicitConversionsAndClasses = true,
    showInferredType = true,
-   -- excludedPackages = {
-   --   "akka.actor.typed.javadsl",
-   --   "com.github.swagger.akka.javadsl"
-   -- }
 }
 
--- metals_config.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
---   vim.lsp.diagnostic.on_publish_diagnostics, {
---     virtual_text = {
---       prefix = '',
---     }
---   }
--- )
-
--- without doing this, autocommands that deal with filetypes prohibit messages from being shown
--- vim.opt_global.shortmess:remove("F")
 
 vim.cmd([[augroup lsp]])
 vim.cmd([[autocmd!]])
