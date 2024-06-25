@@ -51,9 +51,9 @@
   };
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "";
+    variant = "";
   };
 
   environment.sessionVariables = {
@@ -71,6 +71,10 @@
   services.avahi.enable = true;
   services.avahi.nssmdns4 = true;
   services.avahi.openFirewall = true;
+
+  # USB storage
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -108,6 +112,18 @@
 
   # FLAKES
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # OpenGL
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+    extraPackages = with pkgs; [
+        vulkan-loader
+        vulkan-validation-layers
+        vulkan-extension-layer
+    ];
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

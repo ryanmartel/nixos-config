@@ -12,7 +12,7 @@
 
 	qt = {
 		enable = true;
-		platformTheme = "qtct";
+		platformTheme.name = "qtct";
 	};
 	programs.home-manager.enable = true;
 }

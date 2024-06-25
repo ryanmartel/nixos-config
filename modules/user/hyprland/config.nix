@@ -91,7 +91,12 @@ gestures {
 
 # Example per-device config
 # See https://wiki.hyprland.org/Configuring/Keywords/#executing for more
-device:epic-mouse-v1 {
+#device:epic-mouse-v1 {
+#    sensitivity = -0.5
+#}
+
+device {
+    name = epic-mouse-v1
     sensitivity = -0.5
 }
 bind=,XF86AudioMute, exec, wpctl set-mute #DEFAULT_SINK@ toggle

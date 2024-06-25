@@ -49,9 +49,9 @@
   };
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "";
+    variant = "";
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

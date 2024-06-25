@@ -12,7 +12,7 @@
             slug = "rpm";
             name = "rpm";
             author = "Ryan Martel";
-            colors = {
+            palette = {
                 base00 = "#151718";
                 base01 = "#19181c";
                 base02 = "#353535";

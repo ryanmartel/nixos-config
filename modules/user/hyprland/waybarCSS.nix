@@ -14,7 +14,7 @@
 
 
     #workspaces, #clock, #network, #battery {
-        background: #${config.colorScheme.colors.base02};
+        background: #${config.colorScheme.palette.base02};
         border-radius: 20px
     }
 
@@ -23,11 +23,11 @@
         padding: 0 5px;
     }
     #workspaces button.active {
-        color: #${config.colorScheme.colors.base0F};
+        color: #${config.colorScheme.palette.base0F};
         padding: 0 5px;
     }
     #workspaces button.focus {
-        background:  #${config.colorScheme.colors.base04};
+        background:  #${config.colorScheme.palette.base04};
     }
     #clock {
         margin: 0px 16px 0px 10px;
