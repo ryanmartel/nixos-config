@@ -71,6 +71,14 @@ in {
 			'';
 		};
 
+        bgImage = mkOption {
+            type = types.lines;
+            default = import ./bgImage.nix{ inherit config; };
+            description = ''
+                Configuration for background image.
+            '';
+        }
+
 	};
     config = mkIf cfg.enable {
         wayland.windowManager.hyprland = {

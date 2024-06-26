@@ -25,7 +25,6 @@ in {
                 rust-analyzer
                 luajitPackages.lua-lsp
                 nodePackages.eslint
-                nodePackages.pyright
                 metals
                 coursier
                 clang-tools

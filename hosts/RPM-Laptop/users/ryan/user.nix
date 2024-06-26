@@ -7,6 +7,7 @@
 		./home.nix
 	];
 	config = {
+        bgImage = ../../../../deep-ocean.jpg;
         colorScheme = {
             slug = "rpm";
             name = "rpm";
