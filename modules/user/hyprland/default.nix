@@ -71,19 +71,27 @@ in {
 			'';
 		};
 
+        bg = mkOption {
+        type = types.lines;
+        default = ../../../../static/deep-ocean.jpg;
+        description = ''
+        background image
+        ''
+        }
+
         bgImage = mkOption {
             type = types.lines;
             default = import ./bgImage.nix{ inherit config; };
             description = ''
                 Configuration for background image.
             '';
-        }
+        };
 
 	};
     config = mkIf cfg.enable {
         wayland.windowManager.hyprland = {
             enable = true;
-            extraConfig = cfg.baseConfig + cfg.executions + cfg.keybinds + cfg.extraConfig + cfg.monitor + cfg.windowRules;
+            extraConfig = cfg.baseConfig + cfg.executions + cfg.keybinds + cfg.extraConfig + cfg.monitor + cfg.windowRules+ cfg.bgImage;
         };
         services = {
             clipman = {
