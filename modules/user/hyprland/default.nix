@@ -17,7 +17,7 @@ in {
 
 		executions = mkOption {
 			type = types.lines;
-			default = import ./executions.nix;
+			default = import ./executions.nix{ inherit config; };
 			description = ''
 				Hyprland execution command config.
 			'';
@@ -33,7 +33,7 @@ in {
 
 		keybinds = mkOption {
 			type = types.lines;
-			default = import ./keybinds.nix;
+			default = import ./keybinds.nix{ inherit config; };
 			description = ''
 				Hyprland keybind config.
 			'';
@@ -71,27 +71,11 @@ in {
 			'';
 		};
 
-        bg = mkOption {
-        type = types.lines;
-        default = ../../../../static/deep-ocean.jpg;
-        description = ''
-        background image
-        '';
-        };
-
-        bgImage = mkOption {
-            type = types.lines;
-            default = import ./bgImage.nix{ inherit config; };
-            description = ''
-                Configuration for background image.
-            '';
-        };
-
 	};
     config = mkIf cfg.enable {
         wayland.windowManager.hyprland = {
             enable = true;
-            extraConfig = cfg.baseConfig + cfg.executions + cfg.keybinds + cfg.extraConfig + cfg.monitor + cfg.windowRules+ cfg.bgImage;
+            extraConfig = cfg.baseConfig + cfg.executions + cfg.keybinds + cfg.extraConfig + cfg.monitor + cfg.windowRules;
         };
         services = {
             clipman = {

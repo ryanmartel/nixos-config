@@ -1,18 +1,18 @@
 { pkgs, lib, config, ... }:
 
 with lib;
-let cfg = config.modules.background;
+let cfg = config.background;
+bg = ../../../static/deep-ocean.jpg;
 
 in {
-    options.modules.background = { enable = mkEnableOption "background"; };
-    config = mkIf cfg.enable {
-        
+    options.background = { 
+
         bgImage = mkOption {
-            type = types.lines;
-            default = ../../../../static/deep-ocean.jpg;
+            type = types.str;
+            default = ''${bg}'';
             description = ''
                 Configuration for background image.
-            '';
+                '';
         };
     };
 }

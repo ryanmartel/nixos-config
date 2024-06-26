@@ -15,6 +15,5 @@
 		# SYSTEM
 		./packages
         ./hyprland
-        ./background
 	];
 }
