@@ -2,8 +2,7 @@
 
 {
 	imports = [
-		inputs.hyprland.homeManagerModules.default
-        inputs.nix-colors.homeManagerModules.default
+		inputs.nix-colors.homeManagerModules.default
 		./../../../../modules/user/default.nix 
 		./home.nix
 	];
@@ -47,7 +46,7 @@
 			packages.enable = true;
 			hyprland = {
 				enable = true;
-				monitor = "monitor=eDP-1,1920x1080@60,0x0,1.0";
+				monitor = "monitor=eDP-1,1920x1200@60,0x0,1.0";
 				extraConfig = import ./settings/hyprland.nix;
 			};
 		};
