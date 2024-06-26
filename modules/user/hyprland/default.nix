@@ -76,8 +76,8 @@ in {
         default = ../../../../static/deep-ocean.jpg;
         description = ''
         background image
-        ''
-        }
+        '';
+        };
 
         bgImage = mkOption {
             type = types.lines;

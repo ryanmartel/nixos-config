@@ -7,7 +7,6 @@
 		./home.nix
 	];
 	config = {
-        bgImage = ../../../../deep-ocean.jpg;
         colorScheme = {
             slug = "rpm";
             name = "rpm";
@@ -45,6 +44,9 @@
 
 			# SYSTEM
 			packages.enable = true;
+            background = {
+                enable = true;
+            }
 			hyprland = {
 				enable = true;
 				monitor = "monitor=eDP-1,1920x1200@60,0x0,1.0";
