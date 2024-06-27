@@ -37,6 +37,7 @@
 			# GUI
             discord.enable = true;
             qutebrowser.enable = true;
+            zathura.enable = true;
 
 			# CLI
 			kitty.enable = true;	

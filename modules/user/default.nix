@@ -5,6 +5,7 @@
 		# GUI
         ./discord
         ./qutebrowser
+        ./zathura
 		
 		# CLI
 		./kitty
