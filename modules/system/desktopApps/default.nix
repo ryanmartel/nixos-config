@@ -15,6 +15,7 @@ in {
 			google-chrome
 			gimp
 			obs-studio
+            qutebrowser
 			spotify
             calibre
             gnome.cheese
