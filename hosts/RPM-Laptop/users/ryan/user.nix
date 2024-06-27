@@ -36,6 +36,7 @@
 		modules = {
 			# GUI
             discord.enable = true;
+            qutebrowser.enable = true;
 
 			# CLI
 			kitty.enable = true;	

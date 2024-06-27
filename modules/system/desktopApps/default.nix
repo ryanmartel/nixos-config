@@ -12,7 +12,6 @@ in {
 		environment.systemPackages = with pkgs; [
             libsForQt5.konsole
             libsForQt5.okular
-            qutebrowser
 			google-chrome
 			gimp
 			obs-studio

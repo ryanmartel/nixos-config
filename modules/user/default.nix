@@ -4,6 +4,7 @@
 	imports = [
 		# GUI
         ./discord
+        ./qutebrowser
 		
 		# CLI
 		./kitty

@@ -8,7 +8,7 @@ in {
     config = mkIf cfg.enable {
         programs.ranger = {
             enable = true;
-            exttraConfig = ''
+            extraConfig = ''
                 set preview_images true
                 set preview_images_method kitty 
             '';
