@@ -44,6 +44,7 @@
 			nvim.enable = true;
 			zsh.enable = true;
             direnv.enable = true;
+            ranger.enable = true;
 
 			# SYSTEM
 			packages.enable = true;

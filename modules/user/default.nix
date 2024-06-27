@@ -12,6 +12,7 @@
 		./nvim
         ./zsh
         ./direnv
+        ./ranger
 		# SYSTEM
 		./packages
         ./hyprland
