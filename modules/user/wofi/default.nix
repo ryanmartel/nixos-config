@@ -8,7 +8,7 @@ in {
     config = mkIf cfg.enable {
         programs.wofi = {
             enable = true;
-            style = ''${./wofi.nix}'';
+            style = ''${./wofi.css}'';
         };
     };
 }
