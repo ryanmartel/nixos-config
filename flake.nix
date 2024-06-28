@@ -6,9 +6,7 @@
 		# Official NixOS package source, using nixos-unstable branch here
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
         # Current stable
-        nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-23.05";
-		# Hyprland
-		# hyprland.url = "github:hyprwm/Hyprland";
+        nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.05";
         # Nix colors
         nix-colors.url = "github:misterio77/nix-colors";
 		# home-manager, used for managing user configuration
