@@ -31,7 +31,7 @@ in {
            # swaylock # lock screen
           #  wlogout # logout menu
             wl-clipboard # copy and pasting
-           wf-recorder # screen capture
+            wf-recorder # screen capture
             pipewire
             wlroots
             wireplumber

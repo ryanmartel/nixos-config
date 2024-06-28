@@ -90,10 +90,10 @@ in {
                 settings = cfg.waybarConfig;
                 style = cfg.waybarCSS;
             };
-            wofi = {
-                enable = true;
-
-            };
+            # wofi = {
+            #     enable = true;
+            #
+            # };
             swaylock = {
                 enable = true;
                 settings = {

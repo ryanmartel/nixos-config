@@ -6,6 +6,7 @@
         ./discord
         ./qutebrowser
         ./zathura
+        ./wofi
 		
 		# CLI
 		./kitty

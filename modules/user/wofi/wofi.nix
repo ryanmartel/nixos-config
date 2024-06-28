@@ -1,3 +1,4 @@
+''
 * {
     all: unset;
     font-family: "JetBrainsMono";
@@ -33,3 +34,4 @@
     background-color: #303241;
     color: #d9e0ee;
 }
+''
