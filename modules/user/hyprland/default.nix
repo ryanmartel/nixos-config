@@ -17,7 +17,7 @@ in {
 
 		executions = mkOption {
 			type = types.lines;
-			default = import ./executions.nix;
+			default = import ./executions.nix{ inherit config; };
 			description = ''
 				Hyprland execution command config.
 			'';
@@ -33,7 +33,7 @@ in {
 
 		keybinds = mkOption {
 			type = types.lines;
-			default = import ./keybinds.nix;
+			default = import ./keybinds.nix{ inherit config; };
 			description = ''
 				Hyprland keybind config.
 			'';
@@ -71,33 +71,46 @@ in {
 			'';
 		};
 
-        bg = mkOption {
-        type = types.lines;
-        default = ../../../../static/deep-ocean.jpg;
-        description = ''
-        background image
-        ''
-        }
-
-        bgImage = mkOption {
-            type = types.lines;
-            default = import ./bgImage.nix{ inherit config; };
-            description = ''
-                Configuration for background image.
-            '';
-        };
-
 	};
     config = mkIf cfg.enable {
         wayland.windowManager.hyprland = {
             enable = true;
-            extraConfig = cfg.baseConfig + cfg.executions + cfg.keybinds + cfg.extraConfig + cfg.monitor + cfg.windowRules+ cfg.bgImage;
+            extraConfig = cfg.baseConfig + cfg.executions + cfg.keybinds + cfg.extraConfig + cfg.monitor + cfg.windowRules;
         };
         services = {
             clipman = {
                 enable = true;
             };
+
             mako.enable = true;
+
+            hypridle = {
+                enable = true;
+                settings = {
+                    general = {
+                        before_sleep_cmd = "loginctl lock-session";
+                        after_sleep_cmd = "hyprctl dispatch dpms on";
+                        ignore_dbus_inhibit = false;
+                        lock_cmd = "pidof hyprlock || hyprlock";
+
+                    };
+                    listener = [
+                        {
+                            timeout = 600;
+                            on-timeout = "hyprlock";
+                        }
+                        {
+                            timeout = 700;
+                            on-timeout = "hyprctl dispatch dpms off";
+                            on-resume = "hyprctl dispatch dpms on";
+                        }
+                        {
+                            timeout = 12000;
+                            on-timeout = "systemctl suspend";
+                        }
+                    ];
+                };
+            };
         };
         programs = {
             waybar = {
@@ -106,19 +119,52 @@ in {
                 settings = cfg.waybarConfig;
                 style = cfg.waybarCSS;
             };
-            wofi = {
-                enable = true;
-
-            };
-            swaylock = {
+            # wofi = {
+            #     enable = true;
+            #
+            # };
+            # swaylock = {
+            #     enable = true;
+            #     settings = {
+            #         color = "262626";
+            #         font-size = 24;
+            #         indicator-idle-visible = false;
+            #         indicator-radius = 100;
+            #         line-color = "ffffff";
+            #         show-failed-attempts = true;
+            #     };
+            # };
+            hyprlock = {
                 enable = true;
                 settings = {
-                    color = "262626";
-                    font-size = 24;
-                    indicator-idle-visible = false;
-                    indicator-radius = 100;
-                    line-color = "ffffff";
-                    show-failed-attempts = true;
+                    general = {
+                        hide-cursor = true;
+                        grace = 10;
+                    };
+
+                    background = [
+                        {
+                            path = "${config.background.bgImage}";
+                            blur_passes = 3;
+                            blur_size = 8;
+                        }
+                    ];
+
+                    input-field = [
+                        {
+                            size = "200, 50";
+                            position = "0, 0";
+                            monitor = "";
+                            dots_center = true;
+                            fade_on_empty = false;
+                            font_color = "rgb(202, 211, 245)";
+                            inner_color = "rgb(91, 96, 120)";
+                            outer_color = "rgb(24, 25, 38)";
+                            outline_thickness = 5;
+                            placeholder_text = ''<span foreground="##cad3f5">Password...</span>'';
+                            shadow_passes = 2;
+                        }
+                    ];
                 };
             };
         };

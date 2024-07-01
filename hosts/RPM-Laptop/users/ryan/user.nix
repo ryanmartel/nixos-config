@@ -4,10 +4,12 @@
 	imports = [
 		inputs.nix-colors.homeManagerModules.default
 		./../../../../modules/user/default.nix 
+        ./../../../../modules/user/background/default.nix
 		./home.nix
 	];
 	config = {
-        bgImage = ../../../../deep-ocean.jpg;
+        background = {
+        };
         colorScheme = {
             slug = "rpm";
             name = "rpm";
@@ -34,6 +36,9 @@
 		modules = {
 			# GUI
             discord.enable = true;
+            qutebrowser.enable = true;
+            zathura.enable = true;
+            wofi.enable = true;
 
 			# CLI
 			kitty.enable = true;	
@@ -42,12 +47,17 @@
 			nvim.enable = true;
 			zsh.enable = true;
             direnv.enable = true;
+            ranger.enable = true;
 
 			# SYSTEM
 			packages.enable = true;
 			hyprland = {
 				enable = true;
-				monitor = "monitor=eDP-1,1920x1200@60,0x0,1.0";
+				monitor = 
+                ''
+                monitor=eDP-1,1920x1200@60,0x0,1.0
+                monitor=,preferred,auto,1
+                '';
 				extraConfig = import ./settings/hyprland.nix;
 			};
 		};

@@ -28,6 +28,24 @@
   networking.wireless.iwd.enable = true;
   networking.networkmanager.wifi.backend = "iwd";
 
+  # Moonlander
+  hardware.keyboard.zsa.enable = true;
+  hardware.opentabletdriver.enable = true;
+
+  # Laptop power settings
+  services.tlp = {
+    enable = true;
+  };
+  powerManagement.enable = true;
+  # boot.kernelParams = [ "button.lid_init_state=open" ];
+  services.logind = {
+    lidSwitch = "suspend";
+  };
+
+  # USB storage
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
+
   # Bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;

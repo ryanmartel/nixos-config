@@ -12,11 +12,10 @@ in {
 		environment.systemPackages = with pkgs; [
             libsForQt5.konsole
             libsForQt5.okular
-            qutebrowser
 			google-chrome
 			gimp
-            ranger
 			obs-studio
+            qutebrowser
 			spotify
             calibre
             gnome.cheese

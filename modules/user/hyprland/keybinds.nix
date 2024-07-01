@@ -1,6 +1,4 @@
-let 
-	bgImage = ../../../static/eagle.png;
-in
+{ config }:
 ''
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 $mainMod = SUPER
@@ -8,7 +6,7 @@ $mainMod = SUPER
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 bind = $mainMod, return, exec, kitty
 bind = $mainMod SHIFT, Q, killactive, 
-#bind = $mainMod, X, exec, swaylock -i ${bgImage}
+bind = $mainMod, X, exec, swaylock -i ${config.background.bgImage}
 bind = $mainMod, M, exit, 
 bind = $mainMod, E, exec, dolphin
 bind = $mainMod, V, togglefloating, 

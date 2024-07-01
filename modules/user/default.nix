@@ -4,6 +4,9 @@
 	imports = [
 		# GUI
         ./discord
+        ./qutebrowser
+        ./zathura
+        ./wofi
 		
 		# CLI
 		./kitty
@@ -12,6 +15,7 @@
 		./nvim
         ./zsh
         ./direnv
+        ./ranger
 		# SYSTEM
 		./packages
         ./hyprland

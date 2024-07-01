@@ -1,6 +1,3 @@
-let 
-    bgImage = ../../../static/eagle.png;
-in
 ''
 # See https://wiki.hyprland.org/Configuring/Monitors/
 
