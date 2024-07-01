@@ -53,7 +53,11 @@
 			packages.enable = true;
 			hyprland = {
 				enable = true;
-				monitor = "monitor=eDP-1,1920x1200@60,0x0,1.0";
+				monitor = 
+                ''
+                monitor=eDP-1,1920x1200@60,0x0,1.0
+                monitor=,preferred,auto,1
+                '';
 				extraConfig = import ./settings/hyprland.nix;
 			};
 		};
