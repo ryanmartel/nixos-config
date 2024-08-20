@@ -17,6 +17,7 @@ in {
 			obs-studio
             qutebrowser
 			spotify
+            mdbook
             calibre
             gnome.cheese
             vscode
