@@ -19,7 +19,7 @@ in {
 			spotify
             mdbook
             calibre
-            gnome.cheese
+            cheese
             vscode
             teams-for-linux
             discord-screenaudio

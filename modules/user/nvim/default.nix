@@ -24,7 +24,7 @@ in {
                 zls
                 rust-analyzer
                 luajitPackages.lua-lsp
-                nodePackages.eslint
+                eslint
                 metals
                 coursier
                 clang-tools
