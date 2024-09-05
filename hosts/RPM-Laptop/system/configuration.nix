@@ -28,6 +28,7 @@
   networking.wireless.iwd.enable = true;
   networking.networkmanager.wifi.backend = "iwd";
 
+
   # Moonlander
   hardware.keyboard.zsa.enable = true;
   hardware.opentabletdriver.enable = true;
@@ -84,6 +85,11 @@
 	pkgs.libsForQt5.qt5ct
   ];
 
+  programs.wireshark = {
+    enable = true;
+    package = pkgs.wireshark;
+  };
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -112,7 +118,7 @@
   users.users.ryan = {
     isNormalUser = true;
     description = "Ryan Martel";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "wireshark"];
     packages = with pkgs; [
       firefox
     ];
