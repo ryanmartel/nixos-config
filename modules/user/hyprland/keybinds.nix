@@ -6,7 +6,7 @@ $mainMod = SUPER
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 bind = $mainMod, return, exec, kitty
 bind = $mainMod SHIFT, Q, killactive, 
-bind = $mainMod, X, exec, hyprlock
+#bind = $mainMod, X, exec, swaylock -i ${config.background.bgImage}
 bind = $mainMod, M, exit, 
 bind = $mainMod, E, exec, dolphin
 bind = $mainMod, V, togglefloating, 

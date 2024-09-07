@@ -60,7 +60,10 @@ in
             hyprland = {
                 enable = true;
                 waybarConfig = import ./waybar.nix;
-                hypridle = import ./hypridle.nix(bgImage);
+                hypridle = import ./hypridle.nix{ inherit bgImage; };
+                extraConfig = ''
+                bind = $mainMod, X, exec, swaylock -i ${bgImage}
+                '';
             };
         };
     };
