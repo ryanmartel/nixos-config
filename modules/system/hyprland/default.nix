@@ -6,7 +6,7 @@ let cfg = config.modules.hyprland;
 in {
     options.modules.hyprland = { enable = mkEnableOption "hyprland"; };
     config = mkIf cfg.enable {
-        security.pam.services.swaylock = {};
+        security.pam.services.hyprlock = {};
         services = {
             xserver = {
                 enable = true;

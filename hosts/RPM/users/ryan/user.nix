@@ -1,5 +1,8 @@
 { config, lib, inputs, system, ... }:
 
+let 
+bgImage = ./../../../../static/eagle.png;
+in 
 {
 	imports = [
         inputs.nix-colors.homeManagerModules.default
@@ -7,9 +10,10 @@
         ./../../../../modules/user/background/default.nix
 		./home.nix
 	];
-	config = {
+
+    config = {
         background = {
-            bgImage = ''${./../../../../static/eagle.png}'';
+            bgImage = ''${bgImage}'';
         };
         colorScheme = {
             slug = "rpm";
@@ -35,25 +39,29 @@
             };
         };
 
-		modules = {
-			# GUI
+        modules = {
+# GUI
             discord.enable = true;
             qutebrowser.enable = true;
             zathura.enable = true;
             wofi.enable = true;
 
-			# CLI
-			kitty.enable = true;	
-			git.enable = true;
-			bash.enable = false;
-			nvim.enable = true;
-			zsh.enable = true;
+# CLI
+            kitty.enable = true;	
+            git.enable = true;
+            bash.enable = false;
+            nvim.enable = true;
+            zsh.enable = true;
             direnv.enable = true;
             ranger.enable = true;
 
-			# SYSTEM
-			packages.enable = true;
-			hyprland.enable = true;
-		};
-	};
+# SYSTEM
+            packages.enable = true;
+            hyprland = {
+                enable = true;
+                waybarConfig = import ./waybar.nix;
+                hypridle = import ./hypridle.nix(bgImage);
+            };
+        };
+    };
 }
