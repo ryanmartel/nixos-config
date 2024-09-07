@@ -51,6 +51,7 @@
 
 			# SYSTEM
 			packages.enable = true;
+            hyprlock.enable = true;
 			hyprland = {
 				enable = true;
 				monitor = 

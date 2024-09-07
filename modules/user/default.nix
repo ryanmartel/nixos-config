@@ -19,5 +19,6 @@
 		# SYSTEM
 		./packages
         ./hyprland
+        ./hyprlock
 	];
 }
