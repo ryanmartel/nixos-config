@@ -32,7 +32,7 @@ in {
                 vscode-langservers-extracted
                 eslint_d
                 nodePackages.typescript-language-server
-                python311Packages.python-lsp-server
+                pyright
                 # jdt-language-server
             ];
 

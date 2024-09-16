@@ -52,6 +52,7 @@
 			# SYSTEM
 			packages.enable = true;
             hyprlock.enable = true;
+            kanshi.enable = true;
 			hyprland = {
 				enable = true;
 				monitor = 
