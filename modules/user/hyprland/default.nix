@@ -92,10 +92,10 @@ in {
 
             mako.enable = true;
 
-            hypridle = {
-                enable = true;
-                settings = cfg.hypridle;
-            };
+            # hypridle = {
+            #     enable = true;
+            #     # settings = cfg.hypridle;
+            # };
         };
         programs = {
             waybar = {
