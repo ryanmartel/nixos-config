@@ -38,7 +38,6 @@ in {
   #          wireguard-tools
             grim # screenshots
             slurp # select region to screenshot
-            #mako # notifications
             libsForQt5.dolphin # file explorer
         ];
     };

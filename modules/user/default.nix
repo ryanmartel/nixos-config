@@ -20,5 +20,6 @@
 		./packages
         ./hyprland
         ./hyprlock
+        ./kanshi
 	];
 }

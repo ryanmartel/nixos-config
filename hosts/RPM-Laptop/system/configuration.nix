@@ -15,6 +15,9 @@
     options = "--delete-older-than 1w";
   };
 
+  # Resolved
+  services.resolved.enable = true;
+
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -114,13 +117,21 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  # DDC Util for monitor control.
+  boot.kernelModules = ["i2c-dev"];
+  services.udev.extraRules = ''
+      KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
+      '';
+
+  users.groups.i2c = {};
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ryan = {
     isNormalUser = true;
     description = "Ryan Martel";
-    extraGroups = [ "networkmanager" "wheel" "wireshark"];
+    extraGroups = [ "networkmanager" "wheel" "wireshark" "i2c"];
     packages = with pkgs; [
       firefox
+      ddcutil
     ];
   };
 
