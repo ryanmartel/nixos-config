@@ -8,7 +8,8 @@ in {
     config = mkIf cfg.enable {
 	fonts.fontconfig.enable = true;
 	home.packages = with pkgs; [
-		(nerdfonts.override{ fonts = [ "JetBrainsMono" ]; })
+		# (nerdfonts.override{ fonts = [ "JetBrainsMono" ]; })
+        nerd-fonts.jetbrains-mono
 		neofetch
 		nnn #terminal file manager
 

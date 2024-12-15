@@ -13,6 +13,7 @@ in {
 	    curl
         sshfs
         jdt-language-server
+        ollama
 	];
     };
 }

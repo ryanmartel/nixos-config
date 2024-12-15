@@ -12,7 +12,8 @@
 		zsh.enable = true;
 		hyprland.enable = true;
 		packages.enable = true;
-		globalprotect.enable = true;
+        # Out of date. For removal
+		globalprotect.enable = false;
 		laptopcontrols.enable = true;
         postman.enable = false;
     };

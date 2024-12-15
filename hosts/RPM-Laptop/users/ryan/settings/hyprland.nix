@@ -6,4 +6,5 @@ bind=,XF86AudioLowerVolume, exec, wpctl set-volume -l 1.0 @DEFAULT_SINK@ 5%-
 bind=,XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.0 @DEFAULT_SINK@ 5%+
 bind = $mainMod, X, exec, hyprlock
 exec-once = kanshi
+exec-once = kanshictl reload
 ''
