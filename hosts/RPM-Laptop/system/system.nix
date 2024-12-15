@@ -13,7 +13,6 @@
 		hyprland.enable = true;
 		packages.enable = true;
         # Out of date. For removal
-		globalprotect.enable = false;
 		laptopcontrols.enable = true;
         postman.enable = false;
     };

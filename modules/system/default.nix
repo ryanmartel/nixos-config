@@ -10,7 +10,6 @@
 		# SYSTEM
 		./packages
         ./hyprland
-        ./globalprotect
 		./laptopcontrols
         ./postman
 	];
