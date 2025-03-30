@@ -88,17 +88,12 @@
 	pkgs.libsForQt5.qt5ct
   ];
 
-  programs.wireshark = {
-    enable = true;
-    package = pkgs.wireshark;
-  };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
   # Enable sound with pipewire.
   # sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -117,21 +112,13 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # DDC Util for monitor control.
-  boot.kernelModules = ["i2c-dev"];
-  services.udev.extraRules = ''
-      KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
-      '';
-
-  users.groups.i2c = {};
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ryan = {
     isNormalUser = true;
     description = "Ryan Martel";
-    extraGroups = [ "networkmanager" "wheel" "wireshark" "i2c"];
+    extraGroups = [ "networkmanager" "wheel" "wireshark" ];
     packages = with pkgs; [
       firefox
-      ddcutil
     ];
   };
 
@@ -166,6 +153,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 
 }
