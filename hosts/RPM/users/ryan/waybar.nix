@@ -1,6 +1,5 @@
 {
     mainBar = {
-        output = "DP-1";
         layer = "top";
         position = "top";
         height = 32;
