@@ -20,6 +20,7 @@ in {
             teams-for-linux
             discord-screenaudio
             pavucontrol
+            moonlight-qt
 		];	
     };
 }
