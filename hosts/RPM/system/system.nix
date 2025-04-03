@@ -13,5 +13,6 @@
 		hyprland.enable = true;
 		packages.enable = true;
         postman.enable = false;
+        sunshine.enable = true;
     };
 }

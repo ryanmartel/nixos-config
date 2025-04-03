@@ -8,6 +8,7 @@
 		# CLI
         ./zsh
 		# SYSTEM
+        ./sunshine
 		./packages
         ./hyprland
 		./laptopcontrols
