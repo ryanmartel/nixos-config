@@ -15,5 +15,6 @@
         # Out of date. For removal
 		laptopcontrols.enable = true;
         postman.enable = false;
+        minecraft_client.enable = true;
     };
 }
