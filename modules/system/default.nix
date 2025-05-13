@@ -5,7 +5,6 @@
 		# GUI
 		./steam
 		./desktopApps
-        ./minecraft-client
 		# CLI
         ./zsh
 		# SYSTEM
