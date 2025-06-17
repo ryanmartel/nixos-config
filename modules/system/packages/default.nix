@@ -14,6 +14,7 @@ in {
         sshfs
         jdt-language-server
         ollama
+        prismlauncher
 	];
     };
 }
