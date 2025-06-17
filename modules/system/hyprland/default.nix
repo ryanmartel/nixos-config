@@ -28,7 +28,7 @@ in {
             xdg-desktop-portal-hyprland # Desktop Portal
             swaybg # wallpaper
             swayidle # idle timeout
-           # swaylock # lock screen
+            swaylock # lock screen
           #  wlogout # logout menu
             wl-clipboard # copy and pasting
             wf-recorder # screen capture
@@ -38,7 +38,6 @@ in {
   #          wireguard-tools
             grim # screenshots
             slurp # select region to screenshot
-            #mako # notifications
             libsForQt5.dolphin # file explorer
         ];
     };

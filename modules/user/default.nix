@@ -19,5 +19,7 @@
 		# SYSTEM
 		./packages
         ./hyprland
+        ./hyprlock
+        ./kanshi
 	];
 }

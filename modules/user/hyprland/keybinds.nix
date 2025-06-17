@@ -6,12 +6,12 @@ $mainMod = SUPER
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 bind = $mainMod, return, exec, kitty
 bind = $mainMod SHIFT, Q, killactive, 
-bind = $mainMod, X, exec, swaylock -i ${config.background.bgImage}
+#bind = $mainMod, X, exec, swaylock -i ${config.background.bgImage}
 bind = $mainMod, M, exit, 
 bind = $mainMod, E, exec, dolphin
 bind = $mainMod, V, togglefloating, 
 bind = $mainMod, D, exec, wofi --show drun
-bind = $mainMod, P, pseudo, # dwindle
+#bind = $mainMod, P, pseudo, # dwindle
 #bind = $mainMod, J, togglesplit, # dwindle
 
 # Move focus with mainMod + arrow keys

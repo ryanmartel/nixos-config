@@ -12,7 +12,7 @@
 		zsh.enable = true;
 		hyprland.enable = true;
 		packages.enable = true;
-		globalprotect.enable = true;
         postman.enable = false;
+        sunshine.enable = true;
     };
 }

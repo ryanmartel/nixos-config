@@ -7,4 +7,6 @@
 windowrulev2 = idleinhibit fullscreen, class:^(Google-chrome)$
 windowrulev2 = idleinhibit fullscreen, class:^(firefox)$
 windowrulev2 = idleinhibit focus, class:^(Google-chrome)$, title:^(.*YouTube.*)$
+windowrulev2 = idleinhibit fullscreen, class:^(*steam*)$
+windowrulev2 = idleinhibit fullscreen, class:^(*dota2*)$
 ''

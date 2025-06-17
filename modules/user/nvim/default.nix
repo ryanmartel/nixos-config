@@ -24,7 +24,7 @@ in {
                 zls
                 rust-analyzer
                 luajitPackages.lua-lsp
-                nodePackages.eslint
+                eslint
                 metals
                 coursier
                 clang-tools
@@ -32,6 +32,7 @@ in {
                 vscode-langservers-extracted
                 eslint_d
                 nodePackages.typescript-language-server
+                pyright
                 # jdt-language-server
             ];
 

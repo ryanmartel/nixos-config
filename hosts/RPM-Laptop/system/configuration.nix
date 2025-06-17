@@ -15,6 +15,9 @@
     options = "--delete-older-than 1w";
   };
 
+  # Resolved
+  services.resolved.enable = true;
+
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -27,6 +30,7 @@
   # IWD backend for wifi
   networking.wireless.iwd.enable = true;
   networking.networkmanager.wifi.backend = "iwd";
+
 
   # Moonlander
   hardware.keyboard.zsa.enable = true;
@@ -42,6 +46,17 @@
     lidSwitch = "suspend";
   };
 
+  services.udev = {
+      enable = true;
+      extraRules = ''
+        # CMSIS-DAP for microbit
+        ACTION!="add|change", GOTO="microbit_rules_end"
+        SUBSYSTEM=="usb", ATTR{idVendor}=="0d28", ATTR{idProduct}=="0204", TAG+="uaccess"
+        LABEL="microbit_rules_end"
+          '';
+  };
+
+
   # USB storage
   services.gvfs.enable = true;
   services.udisks2.enable = true;
@@ -51,7 +66,7 @@
   services.blueman.enable = true;
 
   # Set your time zone.
-  time.timeZone = "America/Los_Angeles";
+  time.timeZone = "America/Denver";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -89,7 +104,7 @@
 
   # Enable sound with pipewire.
   # sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -112,7 +127,7 @@
   users.users.ryan = {
     isNormalUser = true;
     description = "Ryan Martel";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "wireshark" ];
     packages = with pkgs; [
       firefox
     ];
@@ -149,6 +164,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 
 }

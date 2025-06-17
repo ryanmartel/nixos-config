@@ -43,10 +43,16 @@ decoration {
     # See https://wiki.hyprland.org/Configuring/Variables/ for more
 
     rounding = 10
-    drop_shadow = yes
-    shadow_range = 4
-    shadow_render_power = 3
-    col.shadow = rgba(1a1a1aee)
+    #drop_shadow = yes
+    #shadow_range = 4
+    #shadow_render_power = 3
+    #col.shadow = rgba(1a1a1aee)
+    shadow {
+        enabled = true
+        range = 4
+        render_power = 3
+        color = 0x1a1a1aee
+    }
     blur {
         enabled = yes
         size = 3
@@ -78,7 +84,7 @@ dwindle {
 
 master {
     # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-    new_is_master = true
+    # new_is_master = true
 }
 
 gestures {

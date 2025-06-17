@@ -32,6 +32,13 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
+  # Power settings
+  powerManagement.enable = true;
+
+  # USB storage
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
+
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
 
@@ -66,19 +73,19 @@
 	pkgs.libsForQt5.qt5ct
   ];
 
+  programs.wireshark = {
+    enable = true;
+    package = pkgs.wireshark;
+  };
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
   services.avahi.enable = true;
   services.avahi.nssmdns4 = true;
   services.avahi.openFirewall = true;
 
-  # USB storage
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
-
   # Enable sound with pipewire.
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -101,7 +108,7 @@
   users.users.ryan = {
     isNormalUser = true;
     description = "Ryan Martel";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "wireshark" ];
     packages = with pkgs; [
       firefox
     ];
@@ -114,10 +121,9 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # OpenGL
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
     extraPackages = with pkgs; [
         vulkan-loader
         vulkan-validation-layers

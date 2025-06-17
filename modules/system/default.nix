@@ -8,9 +8,9 @@
 		# CLI
         ./zsh
 		# SYSTEM
+        ./sunshine
 		./packages
         ./hyprland
-        ./globalprotect
 		./laptopcontrols
         ./postman
 	];
