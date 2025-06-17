@@ -19,6 +19,9 @@
   boot.supportedFilesystems = [ "zfs" ];
   boot.zfs.forceImportRoot = false;
 
+  boot.zfs.extraPools = [ "tank" ];
+  services.zfs.autoScrub.enable = true;
+
   # HostId generated via head /etc/machine-id
   networking.hostId = "c8457f14";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -87,7 +90,7 @@
   services.openssh = {
     enable = true;
     ports = [ 22 ];
-    settings.PasswordAuthentication = false;
+    settings.PasswordAuthentication = true;
   };
 
   # Open ports in the firewall.
