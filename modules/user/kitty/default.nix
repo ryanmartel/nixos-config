@@ -45,6 +45,9 @@ in {
 			scrollback_lines = 5000;
 			cursor-shape = "block";
 		};
+        keybindings = {
+            "ctrl+shift+t" = "launch --cwd=current --type=tab";
+        };
 	};
     };
 }

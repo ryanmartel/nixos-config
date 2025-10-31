@@ -51,7 +51,7 @@
       extraRules = ''
         # CMSIS-DAP for microbit
         ACTION!="add|change", GOTO="microbit_rules_end"
-        SUBSYSTEM=="usb", ATTR{idVendor}=="0d28", ATTR{idProduct}=="0204", TAG+="uaccess"
+        SUBSYSTEM=="usb", ATTR{idVendor}=="0d28", ATTR{idProduct}=="0204", TAG+="uaccess", MODE="0666"
         LABEL="microbit_rules_end"
           '';
   };
@@ -90,13 +90,13 @@
   };
 
   environment.sessionVariables = {
-	QT_QPA_PLATFORMTHEME = "qt5ct";
+	QT_QPA_PLATFORMTHEME = "qt6ct";
   };
 
   environment.systemPackages = [
-	pkgs.libsForQt5.breeze-qt5
-	pkgs.libsForQt5.breeze-icons
-	pkgs.libsForQt5.qt5ct
+	pkgs.kdePackages.breeze
+	pkgs.kdePackages.breeze-icons
+	pkgs.kdePackages.qt6ct
   ];
 
   # Enable CUPS to print documents.
@@ -127,11 +127,13 @@
   users.users.ryan = {
     isNormalUser = true;
     description = "Ryan Martel";
-    extraGroups = [ "networkmanager" "wheel" "wireshark" ];
+    extraGroups = [ "networkmanager" "wheel" "wireshark" "docker"];
     packages = with pkgs; [
       firefox
     ];
   };
+
+  virtualisation.docker.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

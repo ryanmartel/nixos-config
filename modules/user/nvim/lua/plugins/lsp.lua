@@ -24,7 +24,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
 
-lsp.setup_servers({'zls', 'ts_ls', 'rust_analyzer', 'clangd', 'pyright'})
+lsp.setup_servers({'zls', 'ts_ls', 'rust_analyzer', 'clangd', 'pyright', 'nixd'})
 
 default_on_attach = function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}

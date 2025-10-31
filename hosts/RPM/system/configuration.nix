@@ -68,9 +68,9 @@
   };
 
   environment.systemPackages = [
-	pkgs.libsForQt5.breeze-qt5
-	pkgs.libsForQt5.breeze-icons
-	pkgs.libsForQt5.qt5ct
+	pkgs.kdePackages.breeze-qt5
+	pkgs.kdePackages.breeze-icons
+	pkgs.kdePackages.qt5ct
   ];
 
   programs.wireshark = {

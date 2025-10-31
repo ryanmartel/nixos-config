@@ -34,6 +34,7 @@ in {
                 nodePackages.typescript-language-server
                 pyright
                 # jdt-language-server
+                nixd
             ];
 
             extraLuaConfig = ''

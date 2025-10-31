@@ -38,7 +38,7 @@ in {
   #          wireguard-tools
             grim # screenshots
             slurp # select region to screenshot
-            libsForQt5.dolphin # file explorer
+            kdePackages.dolphin # file explorer
         ];
     };
 }

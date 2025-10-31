@@ -6,12 +6,12 @@ in {
     options.modules.desktopApps = { enable = mkEnableOption "desktopApps"; };
     config = mkIf cfg.enable {
 		environment.systemPackages = with pkgs; [
-            libsForQt5.konsole
-            libsForQt5.okular
+            kdePackages.konsole
+            kdePackages.okular
 			google-chrome
 			gimp
 			obs-studio
-            qutebrowser
+            # qutebrowser
 			spotify
             mdbook
             calibre

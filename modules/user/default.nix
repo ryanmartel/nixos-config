@@ -4,7 +4,7 @@
 	imports = [
 		# GUI
         ./discord
-        ./qutebrowser
+        # ./qutebrowser
         ./zathura
         ./wofi
 		

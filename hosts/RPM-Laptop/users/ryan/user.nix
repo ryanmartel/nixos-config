@@ -36,7 +36,7 @@
 		modules = {
 			# GUI
             discord.enable = true;
-            qutebrowser.enable = true;
+            # qutebrowser.enable = false;
             zathura.enable = true;
             wofi.enable = true;
 
